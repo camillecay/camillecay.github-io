@@ -1,0 +1,1607 @@
+
+html,body{
+    height: 100%
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    /* used in title page */
+    src: url(JosefinSans/JosefinSansBold-OVA7o.ttf);
+    font-family: JosefinBold;
+}
+
+@font-face{
+    /* used in navi bar */
+    src: url(JosefinSans/JosefinSansLight-ZVEll.ttf);
+    font-family: JosefinLight;
+}
+@font-face{
+    /* used in page headers */
+    src: url(JosefinSans/JosefinSansRegular-x3LYV.ttf);
+    font-family: JosefinReg;
+}
+
+
+@font-face{
+    /* used in main info per section */
+    src: url(proxima_ssv/ProximaNova-Regular.otf);
+    font-family: ProximaReg;
+}
+
+@font-face{
+    /* used in for smaller info */
+    src: url(proxima_ssv/ProximaNovaAltLight.otf);
+    font-family: ProximaLight;
+}
+
+@font-face{
+    /* used in for smaller info */
+    src: url(proxima_ssv/ProximaNovaBold.otf);
+    font-family: ProximaNovaBold;
+}
+
+
+
+/* -----------------------------------------------LOGIN CSS -------------------------------------------*/
+html,body{
+    height: 100%;
+  
+}
+
+.logincontainer{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 241, 241);
+    
+}
+
+.loginarea{
+    background-color:#eedbc7;
+    height: 450px;
+    width: 400px;
+    border: 1px solid rgb(240, 235, 235);
+    border-radius: 10px;
+    box-shadow: 1px 1px 2px rgb(206, 177, 154);
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+.loginheader{
+    grid-row:1/2;
+    font-family: JosefinBold;
+    display: flex;
+    justify-content: center;
+    padding-top: 90px;
+    
+    font-size: 50px;
+}
+
+.logininputs{
+    grid-row: 2/2;
+    margin-top: -25px;
+
+}
+
+input::placeholder{
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
+
+#email,#password{
+  width: 280px;
+  height: 30px;
+  border: 1px transparent; 
+  border-bottom: 1px translucent gray;
+  border-radius: 10px;
+  background-color:rgb(252, 243, 236);
+  position: relative;
+  top: 50px;
+  left: 40px;
+  font-size: 16px;
+  margin: 13px;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-family: ProximaReg;
+}
+
+
+#submitlogin{
+    font-family:JosefinBold;
+    position: relative;
+    left: 130px;
+    top: 80px;
+    height: 30px;
+    width: 130px;
+    font-size: 20px;
+    
+
+}
+
+/* ----------------------------------------------- END OF LOGIN CSS -------------------------------------------*/
+/* ------------------------------------------------START OF MAIN -------------------------------------------- */
+.container{
+    height: 100%;
+    width: 100%;
+
+}
+
+/* ------------------------------- FRONT PAGE --------------------------------------- */
+.frontpage{
+    background-color: #DDBEA9;
+    height: 100%;
+    width: auto;
+    display: grid;
+    grid-template-rows: 3fr 1fr 3fr;
+  
+    
+}
+
+.beforename{
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    font-size:90px;
+    font-family: JosefinReg;
+    color: rgb(105, 66, 45);
+}
+
+.name{
+    grid-row: 2/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:100px;
+    font-family: JosefinBold;
+    color: rgb(105, 66, 45);
+    
+}
+/* ------------------------------------------------------ NAVIGATION BAR ------------------------------------------------*/
+.navibar{
+    position:fixed;
+    top: 35px;
+    right: 50px;
+    z-index: 10;
+    font-family:JosefinLight;
+    font-size: 35px;
+    
+ 
+}
+    .navibar span:hover{
+        cursor: pointer;
+    }
+
+    a{
+        text-decoration: none;
+        color: rgb(70, 68, 68);
+    }
+
+    #educ:hover{
+        background-color: #EDDCD2;
+    }
+    #org:hover{
+        background-color: #B7B7A4;
+    }
+    #work:hover{
+        background-color: #F0EFEB;
+    }
+    #hobby:hover{
+        background-color: #E2D4BA;
+    }
+    #other:hover{
+        background-color: #CB997E;
+    }
+
+ 
+    a:visited{
+        /* color: rgb(105, 66, 45); */
+        color: rgb(70, 68, 68);
+    }
+    a:visited:hover{
+        color: rgb(19, 19, 19);
+    }
+/* ------------------------------------------------------ NAVIGATION BAR ------------------------------------------------*/
+/* ------------------------------------------------COLLAPSE ADD AREA ------------------------------*/
+
+input{
+    
+    height: 35px;
+    width: 80%;
+    font-family:ProximaReg;
+    margin: 10px;
+    margin-left: 15px;
+    margin-top: 10px;
+    
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!EDUC ADD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.educsideBar{
+    min-height: 58%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    right: 0;
+    background-color: rgb(245, 241, 239);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+.educopenNav{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(245, 241, 239);
+    color: rgb(95, 95, 95);
+    border: 1px solid;
+    position: absolute;
+    right: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+   
+}
+
+.educsidebarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 30px;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.educinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+   
+    
+}
+
+
+.educbutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 135px;
+
+    
+
+ 
+}
+
+.educcloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! EDUC EDIT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!EDUC ADD!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.educeditBar{
+    min-height: 58%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    left: 0;
+    background-color: rgb(245, 241, 239);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+.educopenEdit{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(245, 241, 239);
+    color: rgb(95, 95, 95);
+    border: 1px solid;
+    position: absolute;
+    right: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+   
+}
+
+.educeditbarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 30px;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.educinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+   
+    
+}
+
+
+
+
+.educcloseEdit{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+
+
+
+/* ORG SIDE BAR */
+.orgsideBar{
+    min-height: 55%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    right: 0;
+    background-color: rgb(238, 238, 226);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+.orgopenNav{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(238, 238, 226);
+    color: rgb(95, 95, 95);
+    border: 1px solid;
+    position: absolute;
+    right: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+   
+}
+
+.orgsidebarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 30px;
+    font-size: 40px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.orginputs{
+    grid-row:2/3;
+    margin-top: 10px;
+   
+    
+}
+
+
+.orgbutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 135px;
+}
+
+.orgcloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray; 
+}
+
+/* work side bar */
+.worksideBar{
+    min-height: 55%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    right: 0;
+    background-color: White;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+.workopenNav{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(95, 95, 95);
+    border: 1px solid;
+    position: absolute;
+    right: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+   
+}
+
+.worksidebarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 30px;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.workinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+   
+    
+}
+
+
+.workbutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 135px;
+    
+
+ 
+}
+
+.workcloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+
+/* hobby side bar */
+.hobbysideBar{
+    min-height: 55%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 160px;
+    right: 0;
+    background-color: White;
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+.hobbyopenNav{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: rgb(95, 95, 95);
+    border: 1px solid;
+    position: absolute;
+    right: 80px;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 10px 15px;
+    border: none;
+   
+}
+
+.hobbysidebarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 30px;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.hobbyinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+   
+    
+}
+
+
+.hobbybutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 135px;
+    
+
+ 
+}
+
+.hobbycloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+
+/* intro side bar */
+
+.introsideBar{
+    position:relative;
+    height: 40%;
+    width: 0;
+    z-index: 5;
+    top: 160px;
+    left: 0;
+    background-color: rgb(241, 221, 210);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+
+
+.introsidebarContents{
+    display: grid;
+    grid-template-rows: 1fr 3fr 25px;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    margin-top: 60px;
+
+}
+
+.introinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+    
+}
+
+.introData{
+    font-size: 40px;
+    height: 60%;
+    width: 80%;
+}
+
+.introbutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 135px;
+    
+
+}
+
+.introcloseNav{
+    background-color: transparent;
+
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: -50px;
+    right: 15px;
+    color: gray;
+    
+}
+
+
+
+/* links side bar */
+
+
+.linksideBar{
+    position:relative;
+    min-height: 70%;
+    height: auto;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    top: 140px;
+    right: 0;
+    background-color: rgb(231, 208, 195);
+    overflow-x: hidden;
+    transition: 0.5s;
+    /* padding-top: 60px; */
+    display: flex;
+    justify-content: center;
+    font-family: JosefinBold;
+}
+/* 
+.linkopenNav:after{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom:350px;
+    right: 70px;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+
+}
+.linkopenNav:before{
+    display: none;
+} */
+
+.linkcloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+
+/* .linkopenNav:hover{
+    z-index: 3;
+    font-family: JosefinBold;
+    color: white;
+ }   transform: translateY(100px);
+    /* transition: transform 1s cubic-bezier(.31,1.21,.64,1.02); */
+
+
+     
+.linksidebarContents{
+    display: grid;
+    font-size: 45px;
+    position:relative;
+    margin-left: 60px;
+    padding-top: 60px;
+
+}
+
+.linkinputs{
+    grid-row:2/3;
+    margin-top: 10px;
+
+}
+
+
+.linkbutton{
+    grid: 3/3;
+    font-family:ProximaNovaBold;
+    padding: 7px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-left: 135px;  
+
+}
+
+.linkcloseNav{
+    background-color: transparent;
+    border: none;
+    font-family: ProximaLight;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    color: gray;
+    
+}
+/* --------------------------------------------------------------START------------------------------------------------------------- */
+
+
+/* EDUC PAGE */
+.educpage{
+    background-color: #EDDCD2;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+.educheader{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+
+.educData{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    padding: 30px;
+    padding-right:50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 15px;
+    background-color:rgb(245, 241, 239);
+}
+
+
+.educData:hover{
+    padding: 35px;
+    padding-right:55px;
+    transition: linear 0.3s;
+    box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+   
+}
+
+.educData .delButton{
+    color: transparent;
+}
+.educData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: ProximaLight;
+    font-size: 35px;
+    color: black;
+    transition: .9 ease-in-out;
+}
+
+.educData:hover .delButton:hover{
+    color:rgb(112, 110, 110);
+    cursor: pointer;
+}
+.educContent{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.addbutton{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+
+    padding: 5px;
+    font-size: 130px;
+    font-family: JosefinReg;
+    position: absolute;
+    right: 15px;
+    bottom: 30px;
+    border: 1px solid transparent;
+    
+
+}
+.Eschool{
+    font-family:ProximaNovaBold;
+    font-size: 30px;
+    display: inline-block;
+    color:rgb(48, 48, 48);
+    height: auto;
+    width: auto;
+   
+}
+
+.Edegree{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+
+    height: auto;
+    width: auto;
+    padding: 7px;
+} 
+.Eyear_start, .Eyear_end{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 7px;
+    
+    
+
+}
+/*  -------------------------------------- END OF EDUC PAGE -------------------------------------- */
+/* ORG PAGE */
+.orgpage{
+    background-color: #B7B7A4;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
+}
+
+/*  */
+.orgheader{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+
+
+}
+
+.orgData{
+    display: inline-block;
+    width: 20%;
+    position: relative;
+    padding: 30px;
+    padding-right:50px;
+    background-color: rgb(238, 238, 226);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.orgData:hover{
+    padding: 35px;
+    padding-right:55px;
+    transition: linear 0.3s;
+    box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+   
+}
+.orgData .delButton{
+    color: transparent;
+}
+.orgData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: ProximaLight;
+    font-size: 35px;
+    color: black;
+    transition: .9 ease-in-out;
+}
+
+.orgData:hover .delButton:hover{
+    color:rgb(112, 110, 110);
+    cursor: pointer;
+}
+
+.orgContent{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+
+.Oname{
+    font-family:ProximaNovaBold;
+    font-size: 30px;
+    display: inline-block;
+    color:rgb(48, 48, 48);
+    height: auto;
+    width: auto;
+   
+}
+
+.Oposition{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+
+    height: auto;
+    width: auto;
+    padding: 7px;
+} 
+.Oyear_start, .Oyear_end{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 7px;
+}
+
+.icons{
+    position:absolute;
+    right: 15%;
+    bottom: 7%;
+    padding-left: 140px;
+    padding-bottom: 80px;
+}
+/*  -------------------------------------- END OF ORG PAGE -------------------------------------- */
+/* WORK PAGE */
+.workpage{
+    background-color: #F0EFEB;
+    /* background-color: black; */
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
+    
+}
+
+.workheader{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+
+
+}
+
+.workData{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    padding: 30px;
+    padding-right:50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+}
+.workData:hover{
+    padding: 35px;
+    padding-right:55px;
+    transition: linear 0.3s;
+    box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+   
+}
+.workData .delButton{
+    color: transparent;
+}
+.workData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: ProximaLight;
+    font-size: 35px;
+    color: black;
+    transition: .9 ease-in-out;
+}
+
+.workData:hover .delButton:hover{
+    color:rgb(112, 110, 110);
+    cursor: pointer;
+}
+.workContent{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.Wname{
+    font-family:ProximaNovaBold;
+    font-size: 30px;
+    display: inline-block;
+    color:rgb(48, 48, 48);
+    height: auto;
+    width: auto;
+   
+}
+
+.Wlab{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+
+    height: auto;
+    width: auto;
+    padding: 7px;
+} 
+.Wyear_start, .Wyear_end{
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 7px;
+    
+    
+
+}
+
+/*  -------------------------------------- END OF WORK PAGE -------------------------------------- */
+/* -------------------------------- START OF HOBBY PAGE -----------------------------------------*/
+.hobbypage{
+    background-color: #E2D4BA;
+    /* background-color: black; */
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;      
+}
+
+.hobbyheader{
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    padding-top: 80px;
+    padding-bottom: 10px;
+}
+
+.hobbyData{
+    display: inline-block;
+    width: 30%;
+    height: auto;
+    position: relative;
+    padding: 30px;
+    padding-right:50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    font-family:JosefinLight;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    margin-left: 140px;
+    background-color: rgb(228, 222, 210);
+}
+.hobbyData:hover{
+
+    padding: 35px;
+    padding-right:55px;
+    height: auto;
+    transition: linear 0.3s;
+    box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+   
+}
+.hobbyData .delButton{
+    color: transparent;
+}
+.hobbyData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: ProximaLight;
+    font-size: 35px;
+    color: black;
+    transition: .9 ease-in-out;
+}
+
+.hobbyData:hover .delButton:hover{
+    color:rgb(112, 110, 110);
+    cursor: pointer;
+}
+
+
+/* -------------------------------- END OF HOBBY PAGE -----------------------------------------*/
+/* ------------------------------------------OTHER PAGE--------------------------------------------- */
+
+ .otherpage{
+    background-color: #CB997E;
+    height: 100%;
+    width: auto;
+    position: relative;   
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.introContent{
+    grid-column:1/2;
+   padding: 20px;
+    height: auto;
+    width: auto;
+    font-family: ProximaReg;
+    position: absolute;
+    left: 180px;
+    top: 170px;
+    margin-top: 30px;
+    background-color: rgb(223, 181, 159);
+}
+ .introContent:hover{
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+} 
+
+.introopenNav{
+    position: absolute;
+    top: 130px;
+    left: 670px;
+}
+
+/* INTRO HEADER EFEX */
+
+.introheader{
+   position: absolute;
+   top: 110px;
+   left: 120px;
+   font-size: 70px;
+    /* margin: 40px; */
+    font-family: ProximaNovaBold;
+}
+
+/*  -------------------------------------- END OF OTHER PAGE -------------------------- */
+/* ------------------------------------ LINKS PAGE ------------------------------------ */
+
+/* .linkpage{
+    background-color: #CCC7B9;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
+} */
+.linkedinicon, .githubicon, .twittericon{
+    height: 50px;
+    width: 50px; 
+}
+
+/* 
+html,
+body {
+    height: 100%;
+    width: 100%;
+} */
+
+
+.card {
+    grid-column:2/2;
+    position: absolute;
+    border-radius: 8px;
+    height: 450px;
+    width: 400px;
+    top: 25%;
+    right: 15%;
+    /* margin-right: 190px; */
+    background-image: url(picKO.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 80px -10px black;
+    overflow: hidden;
+}
+
+.card-blur {
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 1px);
+    /* background-color: #1f9bcc; */
+    background-color: rgb(113, 90, 74);
+    opacity: 0;
+    transition: opacity 0.15s ease-in;
+}
+
+.card:hover .card-blur {
+    opacity: 0.6;
+}
+
+.footer {
+    z-index: 1;
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    bottom: 0;
+}
+
+svg#curve {
+    /* transition: opacity 0.15s ease-in; */
+    position: absolute;
+    fill:  #DDBEA9;
+    fill-opacity: .99999;
+    left: 0;
+    bottom: 0;
+    width: 400px;
+    height: 450px;
+}
+/* svg#curve:hover {
+    /* transition: opacity 0.15s ease-in; */
+/* display:none;
+} */ 
+
+.connections {
+    height: 80px;
+    width: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+    z-index: 2;
+}
+
+.connection {
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 25px;
+    transform: translateY(200px);
+    transition: transform 1s cubic-bezier(.46, 1.48, .18, .81);
+}
+
+.card:hover .connection {
+    transform: translateY(0px);
+}
+
+.connection.github {
+    margin-left: 20px;
+    padding: 5px;
+}
+
+.connection.twitter {
+    margin-bottom: 20px;
+    transition-delay: 0.02s;
+}
+
+.connection.linkedin {
+    transition-delay: 0.04s;
+}
+
+.connection.github .icon {
+    height: 43px;
+    width: 43px;
+    margin-top: 4px;
+    margin-left: 5px; 
+    background-image: url(githubicon.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.twitter .icon {
+    height: 43px;
+    width: 43px;
+    background-image: url(twittericon.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.connection.linkedin .icon {
+    height: 43.1px;
+    width: 43.1px;
+    margin-bottom: 2.6px;
+    margin-left: -6px;
+    background-image: url(linkedinicon.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.info {
+    position: relative;
+	font-family: JosefinBold;
+    padding-left: 20px;
+    transform: translateY(250px);
+    transition: transform 1s cubic-bezier(.31,1.21,.64,1.02);
+}
+
+.card:hover .info {
+    transform: translateY(0px);
+}
+
+.namecard {
+    font-weight: bolder;
+    padding-top: 5px;
+    font-family: ProximaReg;
+}
+
+.job {
+    margin-top: 10px;
+    font-family: JosefinBold;
+}
+.card:hover .linkopenNav{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom:350px;
+    right: 10px;
+    font-size: 50px;
+    background-color: noblur;
+    border: none;
+    border-radius: 50%;
+
+}
+
+
+
+/* FAVICON */
+/* .letterC{
+    position:fixed;
+    top: 30px;
+    left: 33px;
+    z-index: 10; */
+    /* kahit mag scroll ka magsstay pa rin siya */
+    /* height: 70px;
+    width: 70px;
+    color: transparent;
+} */
+
+/* SOCMED ICONS */
+.twit{
+    height: 40px;
+}
+
+.linkedin{
+    height: 45px;
+}
+
+.github{
+    height: 50px;
+}
+
+
+
+/* COFFEE */
+.cup{
+    z-index: 2;
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    transform: translate(-50%,-50%);
+    width: 50px;
+    height: 80px;
+    border: 6px solid #262626;
+    border-top: 2px solid transparent;
+    border-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+
+}
+
+/* .cup:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 28px;
+    border: 6px solid #fff;
+    right: -38px;
+    top: 10px;
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+} */
+
+.water{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    overflow: hidden;
+}
+
+.water .wave{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(coffee.png);
+    animation: animate 1s linear infinite;
+
+}
+
+@keyframes animate{
+    0%
+    {
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: 200px;
+    }
+}
+
+
+/* front page HANASH */
+.frontpage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(186, 138, 112);
+    font-family: JosefinBold;
+   overflow: hidden;
+    max-width: 100vw;
+    max-height: 100vh;
+    
+} 
+/* click button */
+.frontpage:before {
+    content: 'welcome to my website';
+    font-family: JosefinLight;
+    position: absolute;
+    z-index: 5;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+/* MILLE CA */
+ .frontpage * {
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #DDBEA9;
+}
+
+.frontpage *:before, .frontpage *:after {
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 50%;
+    position: absolute;
+}
+
+.frontpage input.input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+   
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay {
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* hi im */
+.frontpage .input.input[type="checkbox"]:checked ~ .cay:before {
+    transform: scale(1);
+    transition-delay: .001s;
+    background-color: rgb(186, 138, 112);
+    color: #DDBEA9;
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h:before {
+    transform: scaleY(1);
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition-delay: 0.4s;
+}
+  .frontpage input.input[type="checkbox"]:checked ~ .cay h:after {
+    box-shadow: 0 77px 0 1px #222, 0 72px 0 0px #765a64;
+    transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scaleY(2) rotate(1deg);
+    transition-delay: 0.5s;
+} 
+
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(1) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 5px;
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(2) {
+    transform: translateX(-2.5px) scaleY(1);  
+    width: 50px;
+    margin-left:40px;
+    margin-right: -20px;
+}
+
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(3) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 5px;
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(4) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 5px;
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(5) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 5px;
+    margin-right: 10px;
+    padding-right: 20px;
+
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(6) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 15px;
+}
+.frontpage input.input[type="checkbox"]:checked ~ .cay h span:nth-child(7) {
+    transform: translateX(-2.5px) scaleY(1);
+    width: 50px;
+    margin: 0 5px;
+}
+
+.frontpage .cay {
+    position: relative;
+    display: inline-block;
+    padding-right: 0px;
+    min-width: 215px;
+
+  
+}
+ .frontpage .cay:before {
+    content: "Hi! I'm";
+    position: absolute;
+    width: 550px;
+    height: 500px;
+    background: #DDBEA9;
+    border-radius: 100%;
+    transition: all 500ms cubic-bezier(1, 0.885, 0.32, 1);
+    transform: scale(4);
+    font-size: 50px;
+    left: calc(4%);
+    top: calc(-40%);
+}
+
+/* CA */
+.frontpage .cay h {
+    margin: 0px;
+    /* color: rgb(105, 66, 45); */
+    color: rgb(105, 66, 45);
+    font-weight: 100;
+    font-size: 100px;
+    position: relative;
+}
+
+/* letters when closed*/
+.frontpage .cay h span {
+    display: inline-block;
+
+    position: relative;
+    width: 0px;
+    /* color: transparent; */
+    
+}
+/* letter Y */
+.frontpage .cay h span:last-of-type {
+    width: auto;
+    color: rgb(105, 66, 45);
+    
+}
+
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!intro!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */

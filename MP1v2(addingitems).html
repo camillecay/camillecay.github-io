@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="MP1v2styles.css">
+        <link rel="icon" href="letterC.png" type="image/png" sizes="16x16">
+    </head>
+    <body onload="hideContent()"> 
+
+
+         LOGIN HTML
+         <div class="logincontainer" id="logincontainer">
+            <div class="loginarea">
+                <div class="loginheader">
+                    USER LOGIN
+                </div>
+                <form class ="logininputs" id="loginForm" method ="post">
+                    <input type="text"  name="email" id="email"placeholder="Enter Email Address"/>
+                    <input type="password" name="password"id="password"placeholder="Enter Password"/>    
+                    <button type="submit" id="submitlogin" onclick="login();">Login</button>   
+                </form>
+
+
+            </div>
+        </div>
+
+        <!-- EVERYTHING IS SINGULAR EXCEPT FOR COLLECTIONS AND DOCUMENT -->
+        <!-- <body> -->
+
+        <div class="container" id="container">
+            <a href="letterC.png" target="_blank"></a>
+
+
+            <a href="#frontpage">
+            <div class="cup">
+                <div class="water">
+                    <div class="wave">
+                        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+                        <script type="text/javascript">
+                            $(window).scroll(function(){
+                                var scroll = $(window).scrollTop(),
+                                    dh = $(document).height(),
+                                    wh = $(window).height();
+                                    sc  rollPercent = (scroll / (dh-wh)) * 100;
+                                    $(".wave").css('top', scrollPercent + '%');
+                            })
+                        </script>
+                         
+                </div>
+            </div>
+        </div>
+    </a>
+
+            <nav class="navibar" id="navibar"> 
+                <span id="educ"><a href="#educpage">Education</a></span>
+                <span id="org"><a href="#orgpage">Organizations</a></span>
+                <span id="work"><a href="#workpage">Works</a></span>
+                <span id="hobby"><a href="#hobbypage">Interests</a></span>
+                <span id="other"><a href="#otherpage">About</a></span>
+                <!-- <span id="contact"><a href="#linkpage">Contact</a></span> -->
+            </nav>
+         
+            <div class="frontpage" id="frontpage">
+                    <!-- <div class="beforename"> Hi! I'm</div>
+                        <div class="name">CAMILLE CAY </div> -->
+            <input type="checkbox" class="input"/>
+            <div class = "cay">
+                <h>CA</span><span><b>M</b></span><span><b>I</b></span><span><b>L</b></span><span><b>L</b></span><span><b>E</b></span><span><b>C</b></span><span><b>A</b></span><span>Y</span></h1>
+            </div>
+                         
+       
+                    <!-- <img src="intoPic.png" class="intoPic"> -->
+            </div>
+        
+            <!-- h1-h6 for spaces in between pages -->
+            <!-- div for consistent -->
+            <h1 class="educpage" id="educpage" >
+                <div class="educheader">
+                    Education </div>
+                    <!-- inside bar -->
+
+                    <div id="educsideBar" class="educsideBar">
+                        <div class="educsidebarContents">
+                            Input Education Details
+                            <button class="educcloseNav" onclick="educcloseNav()">x</button>  
+                            <form class ="educinputs" id="addEducForm">
+                                <input type="text"  id ="educAddschool"name="educAddschool"placeholder="Name of School"/>
+                                <input type="text" id ="educAdddegree"name="educAdddegree"placeholder="Name Of Degree"/>      
+                                <input type="text"  id ="educAddstart"name="educAddstart"placeholder="Year Started"/>
+                                <input type="text" id ="educAddend"name="educAddend"placeholder="Year Ended"/>   
+                            <button class ="educbutton">Add</button> 
+                            </form>
+                        </div>
+                    </div>
+
+                    <div id="educeditBar" class="educeditBar">
+                        <div class="educeditbarContents">
+                            Input Education Updates
+                            <button class="educcloseEdit" onclick="educcloseEdit()">x</button>  
+                            <form class ="educinputs" id="editEducForm">
+                                <input type="text"  id ="educEditschool"name="educEditschool"placeholder="Name of School"/>
+                                <input type="text" id ="educEditdegree"name="educEditdegree"placeholder="Name Of Degree"/>      
+                                <input type="text"  id ="educEditstart"name="educEditstart"placeholder="Year Started"/>
+                                <input type="text" id ="educEditend"name="educEditend"placeholder="Year Ended"/>   
+                            <button class ="educbutton" id="updateButton">Update</button> 
+                            </form>
+                        </div>
+                    </div>
+                    <!-- what to clikc for bar to open -->
+                    <button type="submit"class="educopenNav" id="educopenNav" onclick ="educopenNav()">+</button>
+                    
+                    <table class="educContent" id ="educContent"></table>
+            </h1>
+
+
+
+            <h2 class="orgpage" id="orgpage">
+                <div class="orgheader">
+                    Organizations 
+                </div>
+
+                <div id="orgsideBar" class="orgsideBar">
+                    <div class="orgsidebarContents">
+                        Input Organization Details
+                        <button class="orgcloseNav" onclick="orgcloseNav()">x</button>
+                        <form class ="orginputs" id="addOrgForm">
+                            <input type="text" id="orgAddname" name="orgAddname"placeholder="Name of Organization"/>
+                            <input type="text"id="orgAddposition" name="orgAddposition"placeholder="Position"/>      
+                            <input type="text" id="orgAddstart" name="orgAddstart"placeholder="Year Started"/>
+                            <input type="text"id="orgAddend" name="orgAddend"placeholder="Year Ended"/>   
+                            <button type="submit"class ="orgbutton">Add</button> 
+                        </form>
+                    </div>
+                </div>
+                <button class="orgopenNav"  onclick="orgopenNav()">+</button>
+                    <table class="orgContent" id ="orgContent"></table> 
+            </h2>
+
+            <h3 class="workpage" id="workpage">
+                <div class="workheader">
+                    Works 
+                </div>
+                <div id="worksideBar" class="worksideBar">
+                    <div class="worksidebarContents">
+                        Input Work Details
+                        <button class="workcloseNav" onclick="workcloseNav()">x</button>
+                        <form class ="workinputs" id="addWorkForm">
+                            <input type="text"  id="workAddname"name="workAddname"placeholder="Name of Work"/>  
+                            <input type="text" id="workAddstart" name="workAddstart"placeholder="Year Started"/>
+                            <input type="text"id="workAddend" name="workAddend"placeholder="Year Ended"/>   
+                            <button type="submit"class ="workbutton">Add</button> 
+                        </form>
+                    </div>
+                </div>
+                <button class="workopenNav"  onclick="workopenNav()">+</button>
+                    <table class="workContent" id="workContent"></table>
+            </h3>
+            <!-- interests -->
+            <h4 class="hobbypage" id="hobbypage">
+                <div class = "hobbyheader">Interests
+                </div>
+                <div id="hobbysideBar" class="hobbysideBar">
+                    <div class="hobbysidebarContents">
+                        Input Your Hobbies
+                        <button class="hobbycloseNav" onclick="hobbycloseNav()">x</button>
+                        <form class ="hobbyinputs" id="addHobbyForm">
+                            <input type="text"  id="hobbyAddname"name="hobbyAddname"placeholder="Name of hobby"/>    
+                            <button type="submit"class ="hobbybutton">Add</button> 
+                        </form>
+                    </div>
+                </div>
+                <button class="hobbyopenNav"  onclick="hobbyopenNav()">+</button>
+                    <table class="hobbyContent" id="hobbyContent">
+                    </table>
+                
+                
+            </h4>
+
+           
+            <!-- about -->
+            <h5 class="otherpage" id="otherpage">
+            
+                <div id="introsideBar" class="introsideBar">
+                    <div class="introsidebarContents">
+                        Input New Intro
+                        <button class="introcloseNav" onclick="introcloseNav()">x</button>
+                            <form class ="introinputs" id="editIntroForm">
+                                <input type="text" id="introEditFact" class="introEditFact" name="introEditFact"placeholder="Anything you'd like to let us know?"/>
+                                <button type="submit"id="introbutton"class ="introbutton">Update</button> 
+                            </form>
+                    </div>
+                </div>
+                    <span class="introheader" id="introheader">Get to know me!</span>
+
+                        <table class="introContent" id="introContent">
+                            <img src="drawnpencilsmol.png" class="introopenNav" onclick="introopenNav()"></img>
+
+                            <!-- <div class="introopenNav" onclick="introopenNav()">+</div> -->
+                        </table>
+                 
+         
+             <!-- links -->
+             <div class="linkpage" id="linkpage" >
+                <!-- LINKS SIDEBAR -->
+         
+                <div id="curve" class="card">
+                    <div class="footer">
+                        <div class="connections">
+                            <div class="connection github" onclick="goGithub()"><div class="icon"></div></div>
+                            <div class="connection twitter"onclick="goTwitter()" ><div class="icon"></div></div>
+                            <div class="connection linkedin"  onclick="goLinkedin()"><div class="icon"></div></div>
+                        </div>
+                        <svg id="curve">
+                            <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
+                            <rect id="dummyRect" x="0" y="0" height="450" width="400"
+                          fill="transparent" />
+                            <!-- slide up-->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,100 400,50 V150 H0 V50" fill="freeze" begin="dummyRect.mouseover" end="dummyRect.mouseout" dur="0.1s" id="bounce1" />
+                            <!-- slide up and curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,0 400,50 V150 H0 V50" fill="freeze" begin="bounce1.end" end="dummyRect.mouseout" dur="0.15s" id="bounce2" />
+                            <!-- slide down and curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,80 400,50 V150 H0 V50" fill="freeze" begin="bounce2.end" end="dummyRect.mouseout" dur="0.15s" id="bounce3" />
+                            <!-- slide down and curve out -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,45 400,50 V150 H0 V50" fill="freeze" begin="bounce3.end" end="dummyRect.mouseout" dur="0.1s" id="bounce4" />
+                            <!-- curve in -->
+                            <animate xlink:href="#p" attributeName="d" to="M0,50 Q80,50 400,50 V150 H0 V50" fill="freeze" begin="bounce4.end" end="dummyRect.mouseout" dur="0.05s" id="bounce5" />
+                
+                            <animate xlink:href="#p" attributeName="d" to="M0,200 Q80,100 400,200 V150 H0 V50" fill="freeze" begin="dummyRect.mouseout" dur="0.15s" id="bounceOut" />
+                        </svg>
+                        <div class="info">
+                            <div class="namecard">Camille Cay</div>
+                            <div class="job">Contact Me!</div>
+                          <img src="cardEdit.png" class="linkopenNav"  onclick="linkopenNav()"></img> 
+                        </div>
+                    </div>
+                    
+                    <div class="card-blur"></div>
+                    
+                </div>
+                <div id="linksideBar" class="linksideBar">
+                    <div class="linksidebarContents">
+                        Update Links
+                        <button class="linkcloseNav" onclick="linkcloseNav()">x</button> 
+                            <form class ="linkinputsTwitter" id="editLinkFormTwitter">
+                                <input type="text" id="linkEditTwitter" name="linkEditTwitter"placeholder="New Twitter Link"/>
+                            <button class ="linkbutton">Update</button> 
+                            </form>
+                            <form class ="linkinputsGithub" id="editLinkFormGithub">
+                                <input type="text" id="linkEditGithub" name="linkEditGithub"placeholder="New Github Link"/>
+                            <button class ="linkbutton">Update</button> 
+                            </form>
+                            <form class ="linkinputsLinkedin" id="editLinkFormLinkedin">
+                                <input type="text" id="linkEditLinkedin" name="linkEditLinkedin"placeholder="New LinkedLink"/>
+                            <button class ="linkbutton">Update</button> 
+                            </form>
+                    </div>
+                </div>
+                     
+                    
+                     
+                </div>
+            
+            </h5>
+
+  </div>
+        
+
+
+
+
+            <!-- gets core functions of firebase -->
+              <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+            <!-- references the firestore service -->
+              <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+            <!-- references authentications -->
+              <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    
+    
+          <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyC6CbJKFz2DRyvYoPrGafNaunl-zkaPdqE",
+                authDomain: "ccapdev-resume1.firebaseapp.com",
+                databaseURL: "https://ccapdev-resume1.firebaseio.com",
+                projectId: "ccapdev-resume1",
+                storageBucket: "ccapdev-resume1.appspot.com",
+                messagingSenderId: "459032712935",
+                appId: "1:459032712935:web:5892d2a5cd075f5a5a3442"
+            };
+            // Initialize the connection to Firebase backend
+            var defaultProject = firebase.initializeApp(firebaseConfig);
+            
+            // make auth and firebase references
+            var auth = firebase.auth();
+
+            //whenever you interact with the database, we use this variable (db)
+            var db = firebase.firestore(); 
+        </script>
+        <script src="MP1v2js.js"></script>
+
+      
+
+    </body>
+</html>
