@@ -4,9 +4,9 @@
         <link rel="stylesheet" href="editcss.css">
         <link rel="icon" href="letterC.png" type="image/png" sizes="16x16">
     </head>
-    <body onload="hideContent();"> 
+    <body onload="hideContent()"> 
 
-        <body>
+
         <!-- EVERYTHING IS SINGULAR EXCEPT FOR COLLECTIONS AND DOCUMENT -->
         <a href="letterC.png" target="_blank"></a>
         <!-- LOGIN HTML -->
@@ -21,14 +21,12 @@
                     <button type="submit" id="submitlogin" onclick="login();">Login</button>   
                 </form>
 
-
             </div>
         </div>
 
 
-
-
-        <div class="container" id="container">
+        <div class="container" id="container" >
+            <!-- onload="redarrow()" onwheel="rednoarrow()" -->
             <a href="#frontpage">
                 <div class="cup">
                     <div class="water">
@@ -46,6 +44,11 @@
                              
                     </div>
                 </div>
+            </div>
+
+            <div id="arrow">
+                <img src="redarrow.png">
+                take a sip, scroll, and get to know me more
             </div>
         </a> 
 
@@ -193,6 +196,7 @@
                             <div class="connection github" onclick="goGithub()"><div class="icon"></div></div>
                             <div class="connection twitter"onclick="goTwitter()" ><div class="icon"></div></div>
                             <div class="connection linkedin"  onclick="goLinkedin()"><div class="icon"></div></div>
+                            
                         </div>
                         <svg id="curve">
                             <path id="p" d="M0,200 Q80,100 400,200 V150 H0 V50" transform="translate(0 300)" />
@@ -216,6 +220,7 @@
                             <div class="job">Contact Me!</div>
                           <img src="cardEdit.png" class="linkopenNav"  onclick="linkopenNav()"></img> 
                         </div>
+
                     </div>
                     
                     <div class="card-blur"></div>

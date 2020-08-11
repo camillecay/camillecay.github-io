@@ -242,4 +242,11 @@ function goLinkedin() {
 
 
 
-// COLLAPSE BUTTON STUFF
+// arrow
+    function redarrow(){ 
+        document.getElementById('arrow').style.display = 'block';
+    }
+
+    function rednoarrow(){ 
+        document.getElementById('arrow').style.display = 'none';
+    }

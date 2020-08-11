@@ -12,7 +12,7 @@ function login(){
         console.log("user signed in!");
         document.getElementById("logincontainer").style.display = 'none';
         document.getElementById("container").style.display = 'block';
-        document.getElementById("navibar").style.display = 'block';
+        // document.getElementById("navibar").style.display = 'block';
         // document.getElementById("letterC").style.display = 'block';
 
         var user = firebase.auth().currentUser;
@@ -37,7 +37,10 @@ function login(){
 function hideContent(){
     document.getElementById("container").style.display = 'none';
     document.getElementById("navibar").style.display = 'none';
-
+    document.getElementById("arrow").style.display = 'none';
+    document.getElementById("cup").style.display = 'none';
+    
+   
 }
 
 
@@ -561,3 +564,13 @@ function hobbyopenNav() {
 function hobbycloseNav() {
     document.getElementById("hobbysideBar").style.width = "0";
   }
+
+
+  // arrow
+  function redarrow(){ 
+    document.getElementById('arrow').style.display = 'block';
+}
+
+function rednoarrow(){ 
+    document.getElementById('arrow').style.display = 'none';
+}

@@ -48,7 +48,6 @@ html{
 /* -----------------------------------------------LOGIN CSS -------------------------------------------*/
 html,body{
     height: 100%;
-  
 }
 
 .logincontainer{
@@ -58,6 +57,7 @@ html,body{
     justify-content: center;
     align-items: center;
     background-color: rgb(245, 241, 241);
+    z-index: 9;
     
 }
 
@@ -70,6 +70,7 @@ html,body{
     box-shadow: 1px 1px 2px rgb(206, 177, 154);
     display: grid;
     grid-template-rows: 1fr 2fr;
+    z-index: 9;
 }
 
 .loginheader{
@@ -142,27 +143,14 @@ input::placeholder{
     
 }
 
-.beforename{
-    grid-row: 1/2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 20px;
-    font-size:90px;
-    font-family: JosefinReg;
-    color: rgb(105, 66, 45);
+#arrow{
+    position: absolute;
+    left: 60px;
+    top: 160px;
+    font-family: JosefinLight;
+    z-index: 2;
 }
 
-.name{
-    grid-row: 2/2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size:100px;
-    font-family: JosefinBold;
-    color: rgb(105, 66, 45);
-    
-}
 /* ------------------------------------------------------ NAVIGATION BAR ------------------------------------------------*/
 .navibar{
     position:fixed;
@@ -1106,24 +1094,12 @@ input{
 /*  -------------------------------------- END OF OTHER PAGE -------------------------- */
 /* ------------------------------------ LINKS PAGE ------------------------------------ */
 
-/* .linkpage{
-    background-color: #CCC7B9;
-    min-height: 100%;
-    height: auto;
-    width: auto;
-    position: relative;
-} */
+
 .linkedinicon, .githubicon, .twittericon{
     height: 50px;
     width: 50px; 
 }
 
-/* 
-html,
-body {
-    height: 100%;
-    width: 100%;
-} */
 
 
 .card {
@@ -1132,8 +1108,11 @@ body {
     border-radius: 8px;
     height: 450px;
     width: 400px;
-    top: 25%;
-    right: 15%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
     /* margin-right: 190px; */
     background-image: url(picKO.png);
     background-size: cover;
@@ -1166,7 +1145,7 @@ body {
 }
 
 svg#curve {
-    /* transition: opacity 0.15s ease-in; */
+
     position: absolute;
     fill:  #DDBEA9;
     fill-opacity: .99999;
@@ -1175,10 +1154,6 @@ svg#curve {
     width: 400px;
     height: 450px;
 }
-/* svg#curve:hover {
-    /* transition: opacity 0.15s ease-in; */
-/* display:none;
-} */ 
 
 .connections {
     height: 80px;
@@ -1276,26 +1251,12 @@ svg#curve {
     position: absolute;
     bottom:350px;
     right: 10px;
-    font-size: 50px;
-    background-color: noblur;
+    font-size: 15px;
     border: none;
     border-radius: 50%;
-
 }
 
 
-
-/* FAVICON */
-/* .letterC{
-    position:fixed;
-    top: 30px;
-    left: 33px;
-    z-index: 10; */
-    /* kahit mag scroll ka magsstay pa rin siya */
-    /* height: 70px;
-    width: 70px;
-    color: transparent;
-} */
 
 /* SOCMED ICONS */
 .twit{
@@ -1326,21 +1287,9 @@ svg#curve {
     border-radius: 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
+    box-shadow: 0 0 0 6px #fff, 0 20px 25px rgba(0,0,0,1);
 
 }
-
-/* .cup:before{
-    content: '';
-    position: absolute;
-    width: 15px;
-    height: 28px;
-    border: 6px solid #fff;
-    right: -38px;
-    top: 10px;
-    border-top-left-radius: 35px;
-    border-bottom-right-radius: 35px;
-} */
 
 .water{
     position: absolute;
@@ -1428,7 +1377,7 @@ svg#curve {
 
 /* hi im */
 .frontpage .input.input[type="checkbox"]:checked ~ .cay:before {
-    transform: scale(1);
+    transform: scale(1.1);
     transition-delay: .001s;
     background-color: rgb(186, 138, 112);
     color: #DDBEA9;
