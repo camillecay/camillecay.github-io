@@ -268,9 +268,6 @@ input{
     margin-top: 20px;
     margin-left: 135px;
 
-    
-
- 
 }
 
 .educcloseNav{
@@ -702,29 +699,43 @@ input{
 
 
 .educData:hover{
+
+    display: inline-block;
+    width: 20%;
+    position: relative;
     padding: 35px;
     padding-right:55px;
-    transition: linear 0.3s;
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
-   
+    margin: 15px;
+    background-color:rgb(245, 241, 239);
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+  
 }
-
 .educData .delButton{
-    color: transparent;
-}
-.educData:hover .delButton{
     position: absolute;
     bottom: 10px;
     right: 15px;
     font-family: ProximaLight;
     font-size: 35px;
+    color: transparent;
+   
+}
+.educData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: JosefinBold;
+    font-size: 55px;
     color: black;
-    transition: .9 ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .educData:hover .delButton:hover{
-    color:rgb(112, 110, 110);
+    /* color:rgb(112, 110, 110); */
+    color: rgb(255, 42, 42);
     cursor: pointer;
+    transition: 0s ease-in-out;
 }
 .educContent{
     font-family:JosefinReg;
@@ -738,7 +749,6 @@ input{
 .addbutton{
     background-color: Transparent;
     background-repeat:no-repeat;
-
     padding: 5px;
     font-size: 130px;
     font-family: JosefinReg;
@@ -820,23 +830,30 @@ input{
    
 }
 .orgData .delButton{
-    color: transparent;
-}
-.orgData:hover .delButton{
     position: absolute;
     bottom: 10px;
     right: 15px;
     font-family: ProximaLight;
     font-size: 35px;
+    color: transparent;
+   
+}
+.orgData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: JosefinBold;
+    font-size: 55px;
     color: black;
-    transition: .9 ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .orgData:hover .delButton:hover{
-    color:rgb(112, 110, 110);
+    /* color:rgb(112, 110, 110); */
+    color: rgb(255, 42, 42);
     cursor: pointer;
+    transition: 0s ease-in-out;
 }
-
 .orgContent{
     font-family:JosefinReg;
     font-size: 45px;
@@ -925,21 +942,29 @@ input{
    
 }
 .workData .delButton{
-    color: transparent;
-}
-.workData:hover .delButton{
     position: absolute;
     bottom: 10px;
     right: 15px;
     font-family: ProximaLight;
     font-size: 35px;
+    color: transparent;
+   
+}
+.workData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: JosefinBold;
+    font-size: 55px;
     color: black;
-    transition: .9 ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .workData:hover .delButton:hover{
-    color:rgb(112, 110, 110);
+    /* color:rgb(112, 110, 110); */
+    color: rgb(255, 42, 42);
     cursor: pointer;
+    transition: 0s ease-in-out;
 }
 .workContent{
     font-family:JosefinReg;
@@ -1028,21 +1053,29 @@ input{
    
 }
 .hobbyData .delButton{
-    color: transparent;
-}
-.hobbyData:hover .delButton{
     position: absolute;
     bottom: 10px;
     right: 15px;
     font-family: ProximaLight;
     font-size: 35px;
+    color: transparent;
+   
+}
+.hobbyData:hover .delButton{
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    font-family: JosefinBold;
+    font-size: 55px;
     color: black;
-    transition: .9 ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .hobbyData:hover .delButton:hover{
-    color:rgb(112, 110, 110);
+    /* color:rgb(112, 110, 110); */
+    color: rgb(255, 42, 42);
     cursor: pointer;
+    transition: 0s ease-in-out;
 }
 
 
