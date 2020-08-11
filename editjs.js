@@ -12,8 +12,9 @@ function login(){
         console.log("user signed in!");
         document.getElementById("logincontainer").style.display = 'none';
         document.getElementById("container").style.display = 'block';
-        // document.getElementById("navibar").style.display = 'block';
-        // document.getElementById("letterC").style.display = 'block';
+        document.getElementById("navibar").style.display = 'block';
+        document.getElementById("arrow").style.display = 'block';
+
 
         var user = firebase.auth().currentUser;
         if(user!=null) {
@@ -38,7 +39,7 @@ function hideContent(){
     document.getElementById("container").style.display = 'none';
     document.getElementById("navibar").style.display = 'none';
     document.getElementById("arrow").style.display = 'none';
-    document.getElementById("cup").style.display = 'none';
+
     
    
 }
