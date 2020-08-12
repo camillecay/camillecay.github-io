@@ -89,7 +89,7 @@
                                 <input type="text" id ="educAdddegree"name="educAdddegree"placeholder="Name Of Degree"/>      
                                 <input type="text"  id ="educAddstart"name="educAddstart"placeholder="Year Started"/>
                                 <input type="text" id ="educAddend"name="educAddend"placeholder="Year Ended"/>   
-                            <button class ="educbutton">Add</button> 
+                            <button class ="educbutton" onclick="educcloseNav()">Add</button> 
                             </form>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                             <input type="text"id="orgAddposition" name="orgAddposition"placeholder="Position"/>      
                             <input type="text" id="orgAddstart" name="orgAddstart"placeholder="Year Started"/>
                             <input type="text"id="orgAddend" name="orgAddend"placeholder="Year Ended"/>   
-                            <button type="submit"class ="orgbutton">Add</button> 
+                            <button type="submit"class ="orgbutton" onclick="orgcloseNav()">Add</button> 
                         </form>
                     </div>
                 </div>
@@ -135,7 +135,7 @@
                             <input type="text"  id="workAddname"name="workAddname"placeholder="Name of Work"/>  
                             <input type="text" id="workAddstart" name="workAddstart"placeholder="Year Started"/>
                             <input type="text"id="workAddend" name="workAddend"placeholder="Year Ended"/>   
-                            <button type="submit"class ="workbutton">Add</button> 
+                            <button type="submit"class ="workbutton" onclick="workcloseNav()">Add</button> 
                         </form>
                     </div>
                 </div>
@@ -152,7 +152,7 @@
                         <button class="hobbycloseNav" onclick="hobbycloseNav()">x</button>
                         <form class ="hobbyinputs" id="addHobbyForm">
                             <input type="text"  id="hobbyAddname"name="hobbyAddname"placeholder="Name of hobby"/>    
-                            <button type="submit"class ="hobbybutton">Add</button> 
+                            <button type="submit"class ="hobbybutton" onclick="hobbycloseNav()">Add</button> 
                         </form>
                     </div>
                 </div>
@@ -173,14 +173,14 @@
                         <button class="introcloseNav" onclick="introcloseNav()">x</button>
                             <form class ="introinputs" id="editIntroForm">
                                 <input type="text" id="introEditFact" class="introEditFact" name="introEditFact"placeholder="Anything you'd like to let us know?"/>
-                                <button type="submit"id="introbutton"class ="introbutton">Update</button> 
+                                <button type="submit"id="introbutton"class ="introbutton" onclick="introcloseNav()">Update</button> 
                             </form>
                     </div>
                 </div>
                     <span class="introheader" id="introheader">Get to know me!</span>
 
                         <table class="introContent" id="introContent">
-                            <img src="drawnpencilsmol.png" class="introopenNav" onclick="introopenNav()"></img>
+                            <img src="drawnpencilsmol.png" class="introopenNav" onclick="introopenNav();linkcloseNav()" ></img>
 
                             <!-- <div class="introopenNav" onclick="introopenNav()">+</div> -->
                         </table>
@@ -218,7 +218,7 @@
                         <div class="info">
                             <div class="namecard">Camille Cay</div>
                             <div class="job">Contact Me!</div>
-                          <img src="cardEdit.png" class="linkopenNav"  onclick="linkopenNav()"></img> 
+                          <img src="cardEdit.png" class="linkopenNav"  onclick="linkopenNav();introcloseNav()"></img> 
                         </div>
 
                     </div>

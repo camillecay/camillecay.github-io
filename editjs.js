@@ -484,20 +484,15 @@ function hideContent(){
    
 
 
-
-
-
-
-
 // COLLAPSE BUTTON STUFF
 
-function changeValEduc() // no ';' here
-{
-    if (document.getElementById('educopenNav').textContent=="+") 
-    document.getElementById('educopenNav').textContent = "-";
-    else 
-    document.getElementById('educopenNav').textContent = "+";
-}
+// function changeValEduc() // no ';' here
+// {
+//     if (document.getElementById('educopenNav').textContent=="+") 
+//     document.getElementById('educopenNav').textContent = "-";
+//     else 
+//     document.getElementById('educopenNav').textContent = "+";
+// }
 
 
 function educopenNav() {
@@ -511,13 +506,13 @@ function educcloseNav() {
   }
   
 
-  function changeValOrg() // no ';' here
-{
-    if (document.getElementById('orgopenNav').textContent=="+") 
-    document.getElementById('orgopenNav').textContent = "-";
-    else 
-    document.getElementById('orgopenNav').textContent = "+";
-}
+//   function changeValOrg() // no ';' here
+// {
+//     if (document.getElementById('orgopenNav').textContent=="+") 
+//     document.getElementById('orgopenNav').textContent = "-";
+//     else 
+//     document.getElementById('orgopenNav').textContent = "+";
+// }
 
 function orgopenNav() {
     document.getElementById("orgsideBar").style.width = "450px";
@@ -530,13 +525,13 @@ function orgcloseNav() {
 
 
 
-  function changeValWork() // no ';' here
-{
-    if (document.getElementById('workopenNav').textContent=="+") 
-    document.getElementById('workopenNav').textContent = "-";
-    else 
-    document.getElementById('workpenNav').textContent = "+";
-}
+//   function changeValWork() // no ';' here
+// {
+//     if (document.getElementById('workopenNav').textContent=="+") 
+//     document.getElementById('workopenNav').textContent = "-";
+//     else 
+//     document.getElementById('workpenNav').textContent = "+";
+// }
 
   function workopenNav() {
     document.getElementById("worksideBar").style.width = "450px";
@@ -550,13 +545,13 @@ function workcloseNav() {
   
 
 
-  function changeValIntro() // no ';' here
-  {
-      if (document.getElementById('introopenNav').textContent=="+") 
-      document.getElementById('introopenNav').textContent = "-";
-      else 
-      document.getElementById('introopenNav').textContent = "+";
-  }
+//   function changeValIntro() // no ';' here
+//   {
+//       if (document.getElementById('introopenNav').textContent=="+") 
+//       document.getElementById('introopenNav').textContent = "-";
+//       else 
+//       document.getElementById('introopenNav').textContent = "+";
+//   }
   
   function introopenNav() {
     document.getElementById("introsideBar").style.width = "450px";
@@ -567,13 +562,13 @@ function introcloseNav() {
     document.getElementById("introsideBar").style.width = "0";
   }
 
-  function changeValLink() // no ';' here
-  {
-      if (document.getElementById('linkopenNav').textContent=="+") 
-      document.getElementById('linkopenNav').textContent = "-";
-      else 
-      document.getElementById('linkopenNav').textContent = "+";
-  }
+//   function changeValLink() // no ';' here
+//   {
+//       if (document.getElementById('linkopenNav').textContent=="+") 
+//       document.getElementById('linkopenNav').textContent = "-";
+//       else 
+//       document.getElementById('linkopenNav').textContent = "+";
+//   }
   
   function linkopenNav() {
     document.getElementById("linksideBar").style.width = "450px";
@@ -586,13 +581,13 @@ function linkcloseNav() {
 
 
 
-function changeValHobby() // no ';' here
-  {
-      if (document.getElementById('hobbyopenNav').textContent=="+") 
-      document.getElementById('hobbyopenNav').textContent = "-";
-      else 
-      document.getElementById('hobbyopenNav').textContent = "+";
-  }
+// function changeValHobby() // no ';' here
+//   {
+//       if (document.getElementById('hobbyopenNav').textContent=="+") 
+//       document.getElementById('hobbyopenNav').textContent = "-";
+//       else 
+//       document.getElementById('hobbyopenNav').textContent = "+";
+//   }
 
 
 function hobbyopenNav() {

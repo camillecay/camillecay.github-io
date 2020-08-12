@@ -211,12 +211,13 @@ input{
 
 /* EDUC */
 .educsideBar{
-    min-height: 58%;
-    height: auto;
+    min-height: 40%;
+    max-height: 550px;
+    /* height: 80%; */
     width: 0;
     position: absolute;
     z-index: 1;
-    top: 160px;
+    top: 200px;
     right: 0;
     background-color: rgb(245, 241, 239);
     overflow-x: hidden;
@@ -284,12 +285,13 @@ input{
 
 /* ORG SIDE BAR */
 .orgsideBar{
-    min-height: 55%;
-    height: auto;
+    min-height: 40%;
+    max-height: 550px;
+
     width: 0;
     position: absolute;
     z-index: 1;
-    top: 160px;
+    top:200px;
     right: 0;
     background-color: rgb(238, 238, 226);
     overflow-x: hidden;
@@ -355,12 +357,13 @@ input{
 
 /* work side bar */
 .worksideBar{
-    min-height: 55%;
-    height: auto;
+    min-height: 40%;
+    max-height: 550px;
+
     width: 0;
     position: absolute;
     z-index: 1;
-    top: 160px;
+    top: 200px;
     right: 0;
     background-color: White;
     overflow-x: hidden;
@@ -430,26 +433,27 @@ input{
 
 /* hobby side bar */
 .hobbysideBar{
-    min-height: 55%;
-    height: auto;
+    height:50%;
+
     width: 0;
     position: absolute;
     z-index: 1;
-    top: 160px;
+    top: 200px;
     right: 0;
-    background-color: White;
+    background-color: rgb(247, 237, 221);
     overflow-x: hidden;
     transition: 0.5s;
     /* padding-top: 60px; */
     display: flex;
     justify-content: center;
     font-family: JosefinBold;
+   
 }
 
 .hobbyopenNav{
     font-size: 20px;
     cursor: pointer;
-    background-color: white;
+    background-color: rgb(247, 237, 221);
     color: rgb(95, 95, 95);
     border: 1px solid;
     position: absolute;
@@ -728,14 +732,14 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: 1s ease-in-out;
+    transition: .1s ease-in;
 }
 
 .educData:hover .delButton:hover{
     /* color:rgb(112, 110, 110); */
     color: rgb(255, 42, 42);
     cursor: pointer;
-    transition: 0s ease-in-out;
+
 }
 .educContent{
     font-family:JosefinReg;
@@ -845,14 +849,14 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: 1s ease-in-out;
+    transition: .1s ease-in;
 }
 
 .orgData:hover .delButton:hover{
     /* color:rgb(112, 110, 110); */
     color: rgb(255, 42, 42);
     cursor: pointer;
-    transition: 0s ease-in-out;
+
 }
 .orgContent{
     font-family:JosefinReg;
@@ -957,14 +961,14 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: 1s ease-in-out;
+    transition: .1s ease-in;
 }
 
 .workData:hover .delButton:hover{
     /* color:rgb(112, 110, 110); */
     color: rgb(255, 42, 42);
     cursor: pointer;
-    transition: 0s ease-in-out;
+
 }
 .workContent{
     font-family:JosefinReg;
@@ -1041,7 +1045,7 @@ input{
     font-size: 45px;
     color: rgb(19, 19, 19);
     margin-left: 140px;
-    background-color: rgb(228, 222, 210);
+    background-color: rgb(247, 237, 221);
 }
 .hobbyData:hover{
 
@@ -1068,14 +1072,14 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: 1s ease-in-out;
+    transition: .1s ease-in;
 }
 
 .hobbyData:hover .delButton:hover{
     /* color:rgb(112, 110, 110); */
     color: rgb(255, 42, 42);
     cursor: pointer;
-    transition: 0s ease-in-out;
+
 }
 
 
