@@ -402,12 +402,22 @@ function hideContent(){
     })
 
    //whenever user presses the button, this will happen
-
+   function goTwitter() {
+    db.collection('links').get().then(snapshot => {
+        snapshot.docs.forEach(doc => {
+            if(doc.id == 'twitter')
+                window.open(doc.data().twitter, "");
+            else
+                console.log("")
+            
+        })
+    })
+}
     const editLinkFormTwitter = document.querySelector('#editLinkFormTwitter');   
     editLinkFormTwitter.addEventListener('click', (event) =>{
         event.preventDefault();
         db.collection('links').doc('twitter').update({
-            link: editLinkFormTwitter.linkEditTwitter.value,
+            twitter: editLinkFormTwitter.linkEditTwitter.value,
         }).then(function(){
             // renderLink();
             
@@ -415,38 +425,66 @@ function hideContent(){
         document.getElementById("linkEditTwitter").value = ''
         
     })
-    function goTwitter() {
-        window.open(editLinkFormTwitter.linkEditTwitter.value, "_blank");
+    
+
+
+    function goGithub() {
+        db.collection('links').get().then(snapshot => {
+            snapshot.docs.forEach(doc => {
+                if(doc.id == 'github')
+                    window.open(doc.data().github, "");
+                
+                else
+                    console.log("")
+                
+            })
+        })
     }
+
 
     const editLinkFormGithub = document.querySelector('#editLinkFormGithub');
     editLinkFormGithub.addEventListener('click', (event) =>{
         event.preventDefault();
         db.collection('links').doc('github').update({
-            link: editLinkFormGithub.linkEditGithub.value,
+            github: editLinkFormGithub.linkEditGithub.value,
         }).then(function(){
             // renderLink();
         })
         document.getElementById("linkEditGithub").value = ''
     })
 
-    function goGithub() {
-        window.open(editLinkFormGithub.linkEditGithub.value, "_blank");
+   
+
+
+    function goLinkedin() {
+        db.collection('links').get().then(snapshot => {
+            snapshot.docs.forEach(doc => {
+                if(doc.id == 'linkedin')
+                    window.open(doc.data().linkedin, "");
+                else
+                    console.log("")
+                
+            })
+        })
+        
     }
     
     const editLinkFormLinkedin = document.querySelector('#editLinkFormLinkedin');
     editLinkFormLinkedin.addEventListener('click', (event) =>{
         event.preventDefault();
+
+    
         db.collection('links').doc('linkedin').update({
-            link: editLinkFormLinkedin.linkEditLinkedin.value,
+            linkedin: editLinkFormLinkedin.linkEditLinkedin.value,
         }).then(function(){
             // renderLink();
         })
-        document.getElementById("linkEditLinkedin").value = ''
+        document.getElementById("linkEditLinkedin").value = ''   
     })
-  function goLinkedin() {
-        window.open(editLinkFormLinkedin.linkEditLinkedin.value, "_blank");
-    }
+   
+
+
+
 
 
 
