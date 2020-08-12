@@ -732,7 +732,7 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: .1s ease-in;
+    /* transition: .1s ease-in; */
 }
 
 .educData:hover .delButton:hover{
@@ -849,7 +849,7 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: .1s ease-in;
+    /* transition: .1s ease-in; */
 }
 
 .orgData:hover .delButton:hover{
@@ -961,7 +961,7 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: .1s ease-in;
+    /* transition: .1s ease-in; */
 }
 
 .workData:hover .delButton:hover{
@@ -1072,7 +1072,7 @@ input{
     font-family: JosefinBold;
     font-size: 55px;
     color: black;
-    transition: .1s ease-in;
+    /* transition: .1s ease-in; */
 }
 
 .hobbyData:hover .delButton:hover{
@@ -1091,15 +1091,13 @@ input{
     height: 100%;
     width: auto;
     position: relative;   
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
 }
 
 .introContent{
-    grid-column:1/2;
+
    padding: 20px;
     height: auto;
-    width: auto;
+    width: 40%;
     font-family: ProximaReg;
     position: absolute;
     left: 180px;
@@ -1140,17 +1138,14 @@ input{
 
 
 .card {
-    grid-column:2/2;
+ 
+    display: inline-block;
     position: absolute;
     border-radius: 8px;
     height: 450px;
     width: 400px;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    margin: auto;
-    /* margin-right: 190px; */
+    top: 150px;
+    right: 100px;
     background-image: url(picKO.png);
     background-size: cover;
     background-position: center;

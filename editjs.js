@@ -48,7 +48,7 @@ function hideContent(){
 //----------------------------------------------END OF AUTHORIZATION --------------------------------------------
 // --------------------------------------------- GETTING DATA --------------------------------------------------
 
-    let educContent = document.querySelector("#educContent")
+    let educContent = document.querySelector("#educContent");
     function renderEduc(){
         document.getElementById("educContent").innerHTML = '';
             db.collection('educations').get().then(snapshot => {
