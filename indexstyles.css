@@ -165,7 +165,7 @@ html,body{
     padding-right:55px;
     transition: linear 0.3s;
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
-   
+  
 }
 
 .educContent{
@@ -436,6 +436,7 @@ html,body{
     height: auto;
     transition: linear 0.3s;
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .hobbyContent{

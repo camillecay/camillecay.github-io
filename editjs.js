@@ -82,8 +82,10 @@ function hideContent(){
                     delButton.addEventListener('click', (event) => {
                         event.stopPropagation();
                         let getid = event.target.parentElement.getAttribute('id');
-                        db.collection('educations').doc(getid).delete();
-                        readEduc();
+                        db.collection('educations').doc(getid).delete().then(function(doc){
+                            readEduc();
+                        });
+                        
                     })
                 })
             })
@@ -136,8 +138,10 @@ function hideContent(){
             delButton.addEventListener('click', (event) => {
                 event.stopPropagation();
                 let getid = event.target.parentElement.getAttribute('id');
-                db.collection('organizations').doc(getid).delete();
-                readOrg();
+                db.collection('organizations').doc(getid).delete().then(function(doc){
+                    readOrg();
+                });
+                
             })
 
             })
@@ -152,10 +156,12 @@ function hideContent(){
     function readWork(){
 
         document.getElementById("workContent").innerHTML ='';
+
+
         db.collection('works').get().then(snapshot => {
             snapshot.docs.forEach(doc => {
 
-                let work_div = document.createElement('div');
+            let work_div = document.createElement('div');
                 work_div.classList.add("workData");
                 work_div.setAttribute('id', doc.id);
     
@@ -183,14 +189,18 @@ function hideContent(){
     
             workContent.appendChild(work_div);
     
-            delButton.addEventListener('click', (event) => {
-                event.stopPropagation();
-                let getid = event.target.parentElement.getAttribute('id');
-                db.collection('works').doc(getid).delete();
-                readWork();
+                delButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    let getid = event.target.parentElement.getAttribute('id');
+                    db.collection('works').doc(getid).delete().then(function(doc){
+                        readWork();
+                    })
+                    
+                })
             })
-            })
+            
         })
+        
     }
 
     readWork();
@@ -226,8 +236,10 @@ function hideContent(){
                 delButton.addEventListener('click', (event) => {
                     event.stopPropagation();
                     let getid = event.target.parentElement.getAttribute('id');
-                    db.collection('hobbies').doc(getid).delete();
-                    readHobby();
+                    db.collection('hobbies').doc(getid).delete().then(function(){
+                        readHobby();
+                    });
+                    
                 })
         })
     })
