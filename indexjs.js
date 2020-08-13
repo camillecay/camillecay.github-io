@@ -1,8 +1,8 @@
 
-// --------------------------------------------- GETTING DATA --------------------------------------------------
 
+//GETTING DATA
 let educContent = document.querySelector("#educContent")
-function renderEduc(){
+function readEduc(){
     document.getElementById("educContent").innerHTML = '';
         db.collection('educations').get().then(snapshot => {
             snapshot.docs.forEach(doc => {
@@ -42,13 +42,13 @@ function renderEduc(){
         })
 }
 
-renderEduc();
+readEduc();
 
 
 
 //get org content
 let orgContent = document.querySelector("#orgContent");
-function renderOrg(){
+function readOrg(){
 
     document.getElementById("orgContent").innerHTML = '';
     db.collection('organizations').get().then(snapshot => {
@@ -88,17 +88,17 @@ function renderOrg(){
     })
 }
 
-renderOrg();
+readOrg();
 
 // get data works
 
 let workContent = document.querySelector("#workContent")
-function renderWork(){
+function readWork(){
 
     document.getElementById("workContent").innerHTML ='';
     db.collection('works').get().then(snapshot => {
         snapshot.docs.forEach(doc => {
-            // renderWork(doc);
+            // readWork(doc);
 
             let work_div = document.createElement('div');
             work_div.classList.add("workData");
@@ -130,18 +130,12 @@ function renderWork(){
     })
 }
 
-renderWork();
-
-//-----------------------------end of work data-----------------------------------
-
-// -------------------------  start of hobbies data --------------------------------
-
-
+readWork();
 
 
 // hobby 
 let hobbyContent = document.querySelector("#hobbyContent")
-function renderHobby(){
+function readHobby(){
 
     document.getElementById("hobbyContent").innerHTML ='';
 db.collection('hobbies').get().then(snapshot => {
@@ -154,39 +148,23 @@ db.collection('hobbies').get().then(snapshot => {
         let hobby = document.createElement('div');
             hobby.classList.add("hobby");
             hobby.textContent = doc.data().hobby;
-
-
-
             hobby_div.appendChild(hobby);
      
-            hobbyContent.appendChild(hobby_div);
-
-           
-
-
+            hobbyContent.appendChild(hobby_div);  
     })
 })
 }
-//getting data netninja
-renderHobby();
 
+readHobby();
 
-
-// ------------------------------ end of hobbies data
-
-
-
-
-//----------------------start of intro data---------------------------------
 
 
 let introContent = document.querySelector("#introContent")
-function renderIntro(){
+function readIntro(){
 
     document.getElementById("introContent").innerHTML ='';
 db.collection('introductions').get().then(snapshot => {
     snapshot.docs.forEach(doc => {
-        // renderIntro(doc);
 
         let intro_div = document.createElement('div');
         intro_div.classList.add("introData");
@@ -205,21 +183,14 @@ db.collection('introductions').get().then(snapshot => {
                 event.stopPropagation();
                 let getid = event.target.parentElement.getAttribute('id');
                 db.collection('introductions').doc(getid).delete();
-                renderIntro();
+                readIntro();
             })
     })
 })
 }
-//getting data netninja
-renderIntro();
 
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//------------------------------start of links data-----------------------------
+readIntro();
 
-       
-
-//-------------------------END OF GETTING DATA----------------------------------------------------------------------------
-// -------------------------------------ADDING/SAVINGDATA--------------------------------------------------------------
 
 function goGithub() {
     db.collection('links').get().then(snapshot => {

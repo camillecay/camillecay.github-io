@@ -43,8 +43,16 @@ html{
     font-family: ProximaNovaBold;
 }
 
+@font-face{
+    src: url(ProximaNovaExtrabold.otf);
+    font-family: ProximaNovaExtrabold;
+}
 
-
+@font-face{
+    /* used in for smaller info */
+    src: url(ProximaNovaAltThin.otf);
+    font-family: ProximaThin;
+}
 
 html,body{
     height: 100%;
@@ -56,7 +64,7 @@ html,body{
 
 }
 
-/* ------------------------------- FRONT PAGE --------------------------------------- */
+/* FRONT PAGE */
 .frontpage{
     background-color: #DDBEA9;
     height: 100%;
@@ -75,7 +83,7 @@ html,body{
 }
 
 
-/* ------------------------------------------------------ NAVIGATION BAR ------------------------------------------------*/
+/* NAVIGATION BAR */
 .navibar{
     position:fixed;
     top: 35px;
@@ -118,10 +126,9 @@ html,body{
     a:visited:hover{
         color: rgb(19, 19, 19);
     }
-/* ------------------------------------------------------ END OF NAVIGATION BAR ------------------------------------------------*/
 
-/* --------------------------------------------------------------START OF SECTIONS------------------------------------------------------------- */
 
+/* SECTIONS */
 
 /* EDUC PAGE */
 .educpage{
@@ -173,7 +180,6 @@ html,body{
 .addbutton{
     background-color: Transparent;
     background-repeat:no-repeat;
-
     padding: 5px;
     font-size: 130px;
     font-family: JosefinReg;
@@ -185,17 +191,17 @@ html,body{
 
 }
 .Eschool{
-    font-family:ProximaNovaBold;
-    font-size: 30px;
+    font-family: ProximaReg;
+    font-size: 35px;
     display: inline-block;
     color:rgb(48, 48, 48);
     height: auto;
     width: auto;
-   
 }
 
 .Edegree{
-    font-family: ProximaLight;
+
+    font-family:ProximaNovaExtrabold;
     font-size: 30px;
     color:black;
 
@@ -204,7 +210,7 @@ html,body{
     padding: 7px;
 } 
 .Eyear_start, .Eyear_end{
-    font-family: ProximaLight;
+    font-family: ProximaThin;
     font-size: 30px;
     color:black;
     display: inline-block;
@@ -215,8 +221,12 @@ html,body{
     
 
 }
-/*  -------------------------------------- END OF EDUC PAGE -------------------------------------- */
-/* ---------------------------------------- ORG PAGE ----------------------------------------------*/
+
+
+
+
+
+/* ORG PAGE */
 .orgpage{
     background-color: #B7B7A4;
     min-height: 100%;
@@ -225,7 +235,7 @@ html,body{
     position: relative;
 }
 
-/*  */
+
 .orgheader{
     font-family:JosefinReg;
     font-size: 60px;
@@ -281,13 +291,12 @@ html,body{
     font-family: ProximaLight;
     font-size: 30px;
     color:black;
-
     height: auto;
     width: auto;
     padding: 7px;
 } 
 .Oyear_start, .Oyear_end{
-    font-family: ProximaLight;
+    font-family: ProximaThin;
     font-size: 30px;
     color:black;
     display: inline-block;
@@ -303,95 +312,95 @@ html,body{
     padding-left: 140px;
     padding-bottom: 80px;
 }
-/*  -------------------------------------- END OF ORG PAGE -------------------------------------- */
-/* ------------------------------------------ WORK PAGE -------------------------------------------*/
+
+
+/* WORK PAGE */
 
 .workpage{
-background-color: #F0EFEB;
-/* background-color: black; */
-min-height: 100%;
-height: auto;
-width: auto;
-position: relative;
+    background-color: #F0EFEB;
+    min-height: 100%;
+    height: auto;
+    width: auto;
+    position: relative;
 
 }
 
 .workheader{
-font-family:JosefinReg;
-font-size: 60px;
-color: rgb(19, 19, 19);
-padding-left: 150px;
-padding-top: 100px;
-padding-bottom: 10px;
+    font-family:JosefinReg;
+    font-size: 60px;
+    color: rgb(19, 19, 19);
+    padding-left: 150px;
+    padding-top: 100px;
+    padding-bottom: 10px;
 
 
 }
 
 .workData{
-display: inline-block;
-width: 30%;
-position: relative;
-padding: 30px;
-padding-right:50px;
-background-color: rgb(255, 255, 255);
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-margin: 10px;
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    padding: 30px;
+    padding-right:50px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px;
 }
+
 .workData:hover{
-padding: 35px;
-padding-right:55px;
-transition: linear 0.3s;
-box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
+    padding: 35px;
+    padding-right:55px;
+    transition: linear 0.3s;
+    box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
 
 }
 
 .workContent{
-font-family:JosefinReg;
-font-size: 45px;
-color: rgb(19, 19, 19);
-padding-left: 140px;
-display: flex;
-flex-wrap: wrap;
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
 .Wname{
-font-family:ProximaNovaBold;
-font-size: 30px;
-display: inline-block;
-color:rgb(48, 48, 48);
-height: auto;
-width: auto;
+    font-family:ProximaNovaBold;
+    font-size: 30px;
+    display: inline-block;
+    color:rgb(48, 48, 48);
+    height: auto;
+    width: auto;
 
 }
 
 .Wlab{
-font-family: ProximaLight;
-font-size: 30px;
-color:black;
-
-height: auto;
-width: auto;
-padding: 7px;
+    font-family: ProximaLight;
+    font-size: 30px;
+    color:black;
+    height: auto;
+    width: auto;
+    padding: 7px;
 } 
+
 .Wyear_start, .Wyear_end{
-font-family: ProximaLight;
-font-size: 30px;
-color:black;
-display: inline-block;
-height: auto;
-width: auto;
-padding: 7px;
-
-
+    font-family: ProximaThin;
+    font-size: 30px;
+    color:black;
+    display: inline-block;
+    height: auto;
+    width: auto;
+    padding: 7px;
 
 }
 
-/*  -------------------------------------- END OF WORK PAGE -------------------------------------- */
-/* ---------------------------------------- START OF HOBBY PAGE ------------------------------------*/
+
+
+
+/*  START OF HOBBY PAGE */
 .hobbypage{
     background-color: #E2D4BA;
-    /* background-color: black; */
     min-height: 100%;
     height: auto;
     width: auto;
@@ -411,7 +420,6 @@ padding: 7px;
     display: inline-block;
     min-width: 30%;
     width: auto;
-
     position: relative;
     padding: 30px;
     padding-right:50px;
@@ -419,6 +427,7 @@ padding: 7px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 10px;
 }
+
 .hobbyData:hover{
 
     padding: 35px;
@@ -427,7 +436,6 @@ padding: 7px;
     height: auto;
     transition: linear 0.3s;
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
-   
 }
 
 .hobbyContent{
@@ -440,8 +448,10 @@ padding: 7px;
     flex-wrap: wrap;
 }
 
-/* -------------------------------- END OF HOBBY PAGE -----------------------------------------*/
-/* ---------------------------------- START OF OTHER PAGE--------------------------------------------- */
+
+
+
+/* START OF OTHER/INTRO/LINKS PAGE */
 
  .otherpage{
     background-color: #CB997E;
@@ -450,8 +460,8 @@ padding: 7px;
     position: relative;  
 }
 
+/* INTRO SECTION */
 .introContent{
-  
     padding: 20px;
     height: auto;
     width: 40%;
@@ -467,11 +477,6 @@ padding: 7px;
     box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 } 
 
-.introopenNav{
-    position: absolute;
-    top: 130px;
-    left: 670px;
-}
 .introData{
     font-size: 40px;
     height: 60%;
@@ -485,8 +490,8 @@ padding: 7px;
    font-family: ProximaNovaBold;
 }
 
-/*  -------------------------------------- END OF OTHER PAGE -------------------------- */
-/* ------------------------------------ START LINKS INFO ------------------------------------ */
+
+/* LINKS SECTION */
 
 
 .linkedinicon, .githubicon, .twittericon{
@@ -705,7 +710,7 @@ svg#curve {
 }
 
 
-/* front page HANASH */
+/* front page effects */
 .frontpage {
     display: flex;
     justify-content: center;

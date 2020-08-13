@@ -1,7 +1,5 @@
 
 
-//------------------------------ AUTHORIZATION --------------------------------------------
-
 function login(){
 
     var email = document.getElementById("email").value;
@@ -39,17 +37,12 @@ function hideContent(){
     document.getElementById("container").style.display = 'none';
     document.getElementById("navibar").style.display = 'none';
     document.getElementById("arrow").style.display = 'none';
-
-    
-   
 }
 
 
-//----------------------------------------------END OF AUTHORIZATION --------------------------------------------
-// --------------------------------------------- GETTING DATA --------------------------------------------------
 
     let educContent = document.querySelector("#educContent");
-    function renderEduc(){
+    function readEduc(){
         document.getElementById("educContent").innerHTML = '';
             db.collection('educations').get().then(snapshot => {
                 snapshot.docs.forEach(doc => {
@@ -90,19 +83,19 @@ function hideContent(){
                         event.stopPropagation();
                         let getid = event.target.parentElement.getAttribute('id');
                         db.collection('educations').doc(getid).delete();
-                        renderEduc();
+                        readEduc();
                     })
                 })
             })
     }
 
-    renderEduc();
+    readEduc();
 
 
 
     //get org content
     let orgContent = document.querySelector("#orgContent");
-    function renderOrg(){
+    function readOrg(){
 
         document.getElementById("orgContent").innerHTML = '';
         db.collection('organizations').get().then(snapshot => {
@@ -144,24 +137,23 @@ function hideContent(){
                 event.stopPropagation();
                 let getid = event.target.parentElement.getAttribute('id');
                 db.collection('organizations').doc(getid).delete();
-                renderOrg();
+                readOrg();
             })
 
             })
         })
     }
 
-    renderOrg();
+    readOrg();
 
     // get data works
 
     let workContent = document.querySelector("#workContent")
-    function renderWork(){
+    function readWork(){
 
         document.getElementById("workContent").innerHTML ='';
         db.collection('works').get().then(snapshot => {
             snapshot.docs.forEach(doc => {
-                // renderWork(doc);
 
                 let work_div = document.createElement('div');
                 work_div.classList.add("workData");
@@ -195,24 +187,18 @@ function hideContent(){
                 event.stopPropagation();
                 let getid = event.target.parentElement.getAttribute('id');
                 db.collection('works').doc(getid).delete();
-                renderWork();
+                readWork();
             })
             })
         })
     }
 
-    renderWork();
-
-//-----------------------------end of work data-----------------------------------
-
-// -------------------------  start of hobbies data --------------------------------
-
-
+    readWork();
 
 
     // hobby 
     let hobbyContent = document.querySelector("#hobbyContent")
-    function renderHobby(){
+    function readHobby(){
 
         document.getElementById("hobbyContent").innerHTML ='';
     db.collection('hobbies').get().then(snapshot => {
@@ -241,31 +227,21 @@ function hideContent(){
                     event.stopPropagation();
                     let getid = event.target.parentElement.getAttribute('id');
                     db.collection('hobbies').doc(getid).delete();
-                    renderHobby();
+                    readHobby();
                 })
         })
     })
 }
-    //getting data netninja
-    renderHobby();
 
-
-
-// ------------------------------ end of hobbies data
-
-
-
-
-//----------------------start of intro data---------------------------------
-
+    readHobby();
 
     let introContent = document.querySelector("#introContent")
-    function renderIntro(){
+    function readIntro(){
 
         document.getElementById("introContent").innerHTML ='';
     db.collection('introductions').get().then(snapshot => {
         snapshot.docs.forEach(doc => {
-            // renderIntro(doc);
+            // readIntro(doc);
 
             let intro_div = document.createElement('div');
             intro_div.classList.add("introData");
@@ -284,29 +260,16 @@ function hideContent(){
                     event.stopPropagation();
                     let getid = event.target.parentElement.getAttribute('id');
                     db.collection('introductions').doc(getid).delete();
-                    renderIntro();
+                    readIntro();
                 })
         })
     })
 }
-    //getting data netninja
-    renderIntro();
-
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-//------------------------------start of links data-----------------------------
-
-           
-
-//-------------------------END OF GETTING DATA----------------------------------------------------------------------------
-// -------------------------------------ADDING/SAVINGDATA--------------------------------------------------------------
-    // //adding/saving Data
+    readIntro();
 
 
-// function educAskForOneMore(){
-//     // lalabas yung option na add one more or smth
-// }
     const addEducForm = document.querySelector('#addEducForm');
-    // //whenever user presses the button, this will happen
+
     addEducForm.addEventListener('submit', (event) =>{
         event.preventDefault();
         db.collection('educations').add({
@@ -318,7 +281,7 @@ function hideContent(){
             
         }).then(function(doc){
             console.log('item added w ID: ' + doc.id);
-            renderEduc();
+            readEduc();
 
         })
 
@@ -329,7 +292,7 @@ function hideContent(){
     })
 
     const addWorkForm = document.querySelector('#addWorkForm');
-    // //whenever user presses the button, this will happen
+
     addWorkForm.addEventListener('submit', (event) =>{
         event.preventDefault();
         db.collection('works').add({
@@ -338,7 +301,7 @@ function hideContent(){
             year_end: addWorkForm.workAddend.value
         }).then(function(doc){
             console.log('item added w ID: ' + doc.id);
-            renderWork();
+            readWork();
         })
 
         document.getElementById("workAddname").value = ''
@@ -350,7 +313,7 @@ function hideContent(){
 
 
     const addOrgForm = document.querySelector('#addOrgForm');
-    // //whenever user presses the button, this will happen
+
     addOrgForm.addEventListener('submit', (event) =>{
         event.preventDefault();
         db.collection('organizations').add({
@@ -360,7 +323,7 @@ function hideContent(){
             year_end: addOrgForm.orgAddend.value
         }).then(function(doc){
             console.log('item added w ID: ' + doc.id);
-            renderOrg();
+            readOrg();
         })
 
         document.getElementById("orgAddname").value = ''
@@ -370,14 +333,14 @@ function hideContent(){
     })
 
     const addHobbyForm = document.querySelector('#addHobbyForm');
-    // //whenever user presses the button, this will happen
+
     addHobbyForm.addEventListener('submit', (event) =>{
         event.preventDefault();
         db.collection('hobbies').add({
             hobby: addHobbyForm.hobbyAddname.value
         }).then(function(doc){
             console.log('item added w ID: ' + doc.id);
-            renderHobby();
+            readHobby();
 
         })
 
@@ -385,23 +348,23 @@ function hideContent(){
 
     })
 
-    // EDIT DATA
+
 
     const editIntroForm = document.querySelector('#editIntroForm');
-    // //whenever user presses the button, this will happen
+
     editIntroForm.addEventListener('submit', (event) =>{
         event.preventDefault();
         db.collection('introductions').doc('desc').update({
             fact: editIntroForm.introEditFact.value,
         }).then(function(){
             console.log("oks na");
-            renderIntro();
+            readIntro();
         })
         document.getElementById("introEditFact").value = ''
         
     })
 
-   //whenever user presses the button, this will happen
+
    function goTwitter() {
     db.collection('links').get().then(snapshot => {
         snapshot.docs.forEach(doc => {
@@ -419,7 +382,7 @@ function hideContent(){
         db.collection('links').doc('twitter').update({
             twitter: editLinkFormTwitter.linkEditTwitter.value,
         }).then(function(){
-            // renderLink();
+       
             
         })
         document.getElementById("linkEditTwitter").value = ''
@@ -448,7 +411,7 @@ function hideContent(){
         db.collection('links').doc('github').update({
             github: editLinkFormGithub.linkEditGithub.value,
         }).then(function(){
-            // renderLink();
+    
         })
         document.getElementById("linkEditGithub").value = ''
     })
@@ -477,22 +440,12 @@ function hideContent(){
         db.collection('links').doc('linkedin').update({
             linkedin: editLinkFormLinkedin.linkEditLinkedin.value,
         }).then(function(){
-            // renderLink();
+     
         })
         document.getElementById("linkEditLinkedin").value = ''   
     })
    
 
-
-// COLLAPSE BUTTON STUFF
-
-// function changeValEduc() // no ';' here
-// {
-//     if (document.getElementById('educopenNav').textContent=="+") 
-//     document.getElementById('educopenNav').textContent = "-";
-//     else 
-//     document.getElementById('educopenNav').textContent = "+";
-// }
 
 
 function educopenNav() {
@@ -506,13 +459,6 @@ function educcloseNav() {
   }
   
 
-//   function changeValOrg() // no ';' here
-// {
-//     if (document.getElementById('orgopenNav').textContent=="+") 
-//     document.getElementById('orgopenNav').textContent = "-";
-//     else 
-//     document.getElementById('orgopenNav').textContent = "+";
-// }
 
 function orgopenNav() {
     document.getElementById("orgsideBar").style.width = "450px";
@@ -524,14 +470,6 @@ function orgcloseNav() {
   }
 
 
-
-//   function changeValWork() // no ';' here
-// {
-//     if (document.getElementById('workopenNav').textContent=="+") 
-//     document.getElementById('workopenNav').textContent = "-";
-//     else 
-//     document.getElementById('workpenNav').textContent = "+";
-// }
 
   function workopenNav() {
     document.getElementById("worksideBar").style.width = "450px";
@@ -545,14 +483,6 @@ function workcloseNav() {
   
 
 
-//   function changeValIntro() // no ';' here
-//   {
-//       if (document.getElementById('introopenNav').textContent=="+") 
-//       document.getElementById('introopenNav').textContent = "-";
-//       else 
-//       document.getElementById('introopenNav').textContent = "+";
-//   }
-  
   function introopenNav() {
     document.getElementById("introsideBar").style.width = "450px";
 
@@ -562,14 +492,7 @@ function introcloseNav() {
     document.getElementById("introsideBar").style.width = "0";
   }
 
-//   function changeValLink() // no ';' here
-//   {
-//       if (document.getElementById('linkopenNav').textContent=="+") 
-//       document.getElementById('linkopenNav').textContent = "-";
-//       else 
-//       document.getElementById('linkopenNav').textContent = "+";
-//   }
-  
+
   function linkopenNav() {
     document.getElementById("linksideBar").style.width = "450px";
 
@@ -578,16 +501,6 @@ function introcloseNav() {
 function linkcloseNav() {
     document.getElementById("linksideBar").style.width = "0";
   }
-
-
-
-// function changeValHobby() // no ';' here
-//   {
-//       if (document.getElementById('hobbyopenNav').textContent=="+") 
-//       document.getElementById('hobbyopenNav').textContent = "-";
-//       else 
-//       document.getElementById('hobbyopenNav').textContent = "+";
-//   }
 
 
 function hobbyopenNav() {

@@ -3,37 +3,32 @@
     <head>
         <link rel="stylesheet" href="indexstyles.css">
     </head>
-    <!-- <body onload="hideContent();"> !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!UNCOMMENT SA FINAL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
         <body onload="redarrow()" onwheel="rednoarrow()">
-        
-        <!-- EVERYTHING IS SINGULAR EXCEPT FOR COLLECTIONS AND DOCUMENT -->
-
         <a href="#frontpage">
            
         <div class="cup">
             <div class="water">
                 <div class="wave">
                     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-                    <script type="text/javascript">
-                        $(window).scroll(function(){
-                            var scroll = $(window).scrollTop(),
-                                dh = $(document).height(),
-                                wh = $(window).height();
-                                scrollPercent = (scroll / (dh-wh)) * 100;
-                                $(".wave").css('top', scrollPercent + '%');
-                        })
-                    </script> 
+                        <script type="text/javascript">
+                            $(window).scroll(function(){
+                                var scroll = $(window).scrollTop(),
+                                    dh = $(document).height(),
+                                    wh = $(window).height();
+                                    scrollPercent = (scroll / (dh-wh)) * 100;
+                                    $(".wave").css('top', scrollPercent + '%');
+                            })
+                        </script> 
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="arrow">
-        <img src="redarrow.png">
-        take a sip, scroll, and get to know me more
-    </div>
-</a>
-
+        <div id="arrow">
+            <img src="redarrow.png">
+            take a sip, scroll, and get to know me more
+        </div>
+        </a>
 
         <div class="container" id="container" >
             <nav class="navibar" id="navibar" onclick="rednoarrow()"> 
@@ -46,16 +41,12 @@
             </nav>
          
             <div class="frontpage" id="frontpage">
-            <input type="checkbox" class="input"/>
-            <div class = "cay">
-                <h>CA</span><span><b>M</b></span><span><b>I</b></span><span><b>L</b></span><span><b>L</b></span><span><b>E</b></span><span><b>C</b></span><span><b>A</b></span><span>Y</span></h1>
+                <input type="checkbox" class="input"/>
+                <div class = "cay">
+                    <h>CA</span><span><b>M</b></span><span><b>I</b></span><span><b>L</b></span><span><b>L</b></span><span><b>E</b></span><span><b>C</b></span><span><b>A</b></span><span>Y</span></h1>
+                </div>
             </div>
-                         
- 
-        </div>
         
-            <!-- h1-h6 for spaces in between pages -->
-            <!-- div for consistent -->
             <h1 class="educpage" id="educpage" >
                 <div class="educheader">
                     Education </div>
@@ -79,7 +70,7 @@
            
                     <table class="workContent" id="workContent"></table>
             </h3>
-            <!-- interests -->
+
             <h4 class="hobbypage" id="hobbypage">
                 <div class = "hobbyheader">Interests
                 </div>
@@ -87,15 +78,14 @@
                     </table>
             </h4>
 
-            <!-- about -->
+
             <h5 class="otherpage" id="otherpage"> 
                 <span class="introheader" id="introheader">Get to know me!</span>
                     <table class="introContent" id="introContent"></table>
                  
-             <!-- links -->
+       
              <div class="linkpage" id="linkpage" >
-                <!-- LINKS SIDEBAR -->
-         
+
                 <div id="curve" class="card">
                     <div class="footer">
                         <div class="connections">
