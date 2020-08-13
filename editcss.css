@@ -144,9 +144,9 @@ input::placeholder{
 }
 
 #arrow{
-    position: absolute;
-    left: 60px;
-    top: 160px;
+    position: fixed;
+    left: 5%;
+    top: 25%;
     font-family: JosefinLight;
     z-index: 2;
 }
@@ -1163,7 +1163,7 @@ input{
 .introheader{
    position: absolute;
    top: 110px;
-   left: 120px;
+   left: 140px;
    font-size: 70px;
     /* margin: 40px; */
     font-family: ProximaNovaBold;
