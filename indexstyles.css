@@ -401,21 +401,16 @@ html,body{
 
 .hobbyData{
     display: inline-block;
-    width: 30%;
-    height: auto;
+    min-width: 30%;
+    width: auto;
+
     position: relative;
     padding: 30px;
-    padding-right:65px;
-    padding-bottom:45px;
+    padding-right:50px;
+    background-color:  rgb(247, 237, 221);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 10px;
-    font-family:JosefinLight;
-    font-size: 45px;
-    color: rgb(19, 19, 19);
-    margin-left: 140px;
-    background-color: rgb(247, 237, 221)
 }
-
 .hobbyData:hover{
 
     padding: 35px;
@@ -427,6 +422,15 @@ html,body{
    
 }
 
+.hobbyContent{
+    height: auto;
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /* -------------------------------- END OF HOBBY PAGE -----------------------------------------*/
 /* ---------------------------------- START OF OTHER PAGE--------------------------------------------- */
