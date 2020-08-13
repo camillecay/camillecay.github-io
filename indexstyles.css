@@ -69,7 +69,7 @@ html,body{
 #arrow{
     position: fixed;
     left: 5%;
-    top: 25%;
+    top: 20%;
     font-family: JosefinLight;
     z-index: 2;
 }
@@ -667,7 +667,7 @@ svg#curve {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     box-shadow: 0 0 0 6px #fff, 0 20px 35px rgba(0,0,0,1);
-
+    margin-bottom: 10px
 }
 
 
