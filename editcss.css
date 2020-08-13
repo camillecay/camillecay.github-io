@@ -1526,10 +1526,9 @@ svg#curve {
     width: 550px;
     height: 500px;
     background: #DDBEA9;
-    /* border-radius: 100%; */
     border-radius: 0;
     transition: all 500ms cubic-bezier(1, 0.885, 0.32, 1);
-    transform: scale(4);
+    transform: scale(9);
     font-size: 50px;
     left: calc(4%);
     top: calc(-40%);
