@@ -1034,23 +1034,21 @@ input{
 
 .hobbyData{
     display: inline-block;
-    width: 30%;
-    height: auto;
+    min-width: 30%;
+    width: auto;
+
     position: relative;
     padding: 30px;
     padding-right:50px;
+    background-color:  rgb(247, 237, 221);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 10px;
-    font-family:JosefinLight;
-    font-size: 45px;
-    color: rgb(19, 19, 19);
-    margin-left: 140px;
-    background-color: rgb(247, 237, 221);
 }
 .hobbyData:hover{
 
     padding: 35px;
-    padding-right:55px;
+    padding-right:70px;
+    padding-bottom:45px;
     height: auto;
     transition: linear 0.3s;
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
@@ -1070,7 +1068,7 @@ input{
     bottom: 10px;
     right: 15px;
     font-family: JosefinBold;
-    font-size: 55px;
+    font-size: 45px;
     color: black;
     /* transition: .1s ease-in; */
 }
@@ -1082,7 +1080,15 @@ input{
 
 }
 
-
+.hobbyContent{
+    height: auto;
+    font-family:JosefinReg;
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    padding-left: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
 /* -------------------------------- END OF HOBBY PAGE -----------------------------------------*/
 /* ------------------------------------------OTHER PAGE--------------------------------------------- */
 
