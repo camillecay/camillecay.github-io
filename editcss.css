@@ -747,8 +747,8 @@ input{
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
     margin: 15px;
     background-color:rgb(245, 241, 239);
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    /* -webkit-transition: all .5s ease;
+    transition: all .5s ease; */
   
 }
 .educData .delButton{
@@ -864,8 +864,8 @@ input{
 .orgData:hover{
     padding: 35px;
     padding-right:55px;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    /* -webkit-transition: all .5s ease;
+    transition: all .5s ease; */
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
    
 }
@@ -976,8 +976,8 @@ input{
 .workData:hover{
     padding: 35px;
     padding-right:55px;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    /* -webkit-transition: all .5s ease;
+    transition: all .5s ease; */
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
    
 }
@@ -1086,8 +1086,8 @@ input{
     padding-right:70px;
     padding-bottom:45px;
     height: auto;
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    /* -webkit-transition: all .5s ease;
+    transition: all .5s ease; */
     box-shadow: 1px 4px 6px 10px rgba(0, 0, 0, 0.2);
    
 }
