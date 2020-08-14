@@ -54,9 +54,7 @@ html{
 
 
 /* LOGIN CSS*/
-html,body{
-    height: 100%;
-}
+
 
 .logincontainer{
     height: 100%;
@@ -142,7 +140,7 @@ input::placeholder{
 /* START OF MAIN */
 .container{
     height: 100%;
-    width: 100%;
+    max-width: 100%;
 
 }
 
@@ -209,7 +207,7 @@ input::placeholder{
     a:visited:hover{
         color: rgb(19, 19, 19);
     }
-/*  NAVIGATION BAR */
+
 
 
 /* COLLAPSE ADD AREA */
