@@ -1,6 +1,6 @@
 
 
-//GETTING DATA
+//reading educ content
 let educContent = document.querySelector("#educContent")
 function readEduc(){
     document.getElementById("educContent").innerHTML = '';
@@ -46,7 +46,7 @@ readEduc();
 
 
 
-//get org content
+//reading org content
 let orgContent = document.querySelector("#orgContent");
 function readOrg(){
 
@@ -90,15 +90,15 @@ function readOrg(){
 
 readOrg();
 
-// get data works
 
+//reading work content
 let workContent = document.querySelector("#workContent")
 function readWork(){
 
     document.getElementById("workContent").innerHTML ='';
     db.collection('works').get().then(snapshot => {
         snapshot.docs.forEach(doc => {
-            // readWork(doc);
+       
 
             let work_div = document.createElement('div');
             work_div.classList.add("workData");
@@ -133,7 +133,7 @@ function readWork(){
 readWork();
 
 
-// hobby 
+//reading hobby content
 let hobbyContent = document.querySelector("#hobbyContent")
 function readHobby(){
 
@@ -158,7 +158,7 @@ db.collection('hobbies').get().then(snapshot => {
 readHobby();
 
 
-
+//reading intro desc
 let introContent = document.querySelector("#introContent")
 function readIntro(){
 
@@ -191,7 +191,7 @@ db.collection('introductions').get().then(snapshot => {
 
 readIntro();
 
-
+//reading reading links content
 function goGithub() {
     db.collection('links').get().then(snapshot => {
         snapshot.docs.forEach(doc => {

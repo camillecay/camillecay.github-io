@@ -4,12 +4,12 @@
         <link rel="stylesheet" href="editcss.css">
 
     </head>
+
+    <!-- only showing login content on load -->
     <body onload="hideContent()"> 
 
 
-        <!-- EVERYTHING IS SINGULAR EXCEPT FOR COLLECTIONS AND DOCUMENT -->
-
-        <!-- LOGIN HTML -->
+        <!-- LOGIN -->
         <div class="logincontainer" id="logincontainer">
             <div class="loginarea">
                 <div class="loginheader">
@@ -25,8 +25,10 @@
         </div>
 
 
+        <!-- main section -->
         <div class="container" id="container" onload="redarrow()" onwheel="rednoarrow()" >
-        
+     
+            <!-- Cup and effects -->
             <a href="#frontpage">
                 <div class="cup">
                     <div class="water">
@@ -45,13 +47,15 @@
                     </div>
                 </div>
             </div>
-
+            
+            <!-- Arrow display -->
             <div id="arrow">
                 <img src="redarrow.png">
                 take a sip, scroll, and get to know me more
             </div>
         </a> 
 
+            <!-- Pages -->
             <nav class="navibar" id="navibar" onclick="rednoarrow()"> 
                 <span id="educ"><a href="#educpage">Education</a></span>
                 <span id="org"><a href="#orgpage">Organizations</a></span>
@@ -60,7 +64,7 @@
                 <span id="other"><a href="#otherpage">About</a></span>
                 <!-- <span id="contact"><a href="#linkpage">Contact</a></span> -->
             </nav>
-         
+         <!-- Front Page Name -->
             <div class="frontpage" id="frontpage">
 
             <input type="checkbox" class="input"/>
@@ -69,12 +73,14 @@
             </div>
 
             </div>
-  
+            
+
+            <!-- education -->
             <h1 class="educpage" id="educpage" >
                 <div class="educheader">
                     Education </div>
              
-
+                    <!-- education form -->
                     <div id="educsideBar" class="educsideBar">
                         <div class="educsidebarContents">
                             Input Education Details
@@ -88,19 +94,22 @@
                             </form>
                         </div>
                     </div>
-                 
                     <button type="submit"class="educopenNav" id="educopenNav" onclick ="educopenNav()">+</button>
                     
+                    <!-- education generation content -->
                     <table class="educContent" id ="educContent"></table>
             </h1>
 
 
 
+
+            <!-- organization -->
             <h2 class="orgpage" id="orgpage">
                 <div class="orgheader">
                     Organizations 
                 </div>
 
+                <!-- org form -->
                 <div id="orgsideBar" class="orgsideBar">
                     <div class="orgsidebarContents">
                         Input Organization Details
@@ -115,13 +124,16 @@
                     </div>
                 </div>
                 <button class="orgopenNav"  onclick="orgopenNav()">+</button>
+                <!-- org generate content -->
                     <table class="orgContent" id ="orgContent"></table> 
             </h2>
 
+            <!-- works -->
             <h3 class="workpage" id="workpage">
                 <div class="workheader">
                     Works 
                 </div>
+                <!-- work form -->
                 <div id="worksideBar" class="worksideBar">
                     <div class="worksidebarContents">
                         Input Work Details
@@ -135,12 +147,16 @@
                     </div>
                 </div>
                 <button class="workopenNav"  onclick="workopenNav()">+</button>
+                <!-- work generate data -->
                     <table class="workContent" id="workContent"></table>
             </h3>
          
+            <!-- hobby/interests -->
             <h4 class="hobbypage" id="hobbypage">
                 <div class = "hobbyheader">Interests
                 </div>
+
+                <!-- hobby form -->
                 <div id="hobbysideBar" class="hobbysideBar">
                     <div class="hobbysidebarContents">
                         Input Your Hobbies
@@ -152,6 +168,7 @@
                     </div>
                 </div>
                 <button class="hobbyopenNav"  onclick="hobbyopenNav()">+</button>
+                <!-- hobby generate data -->
                     <table class="hobbyContent" id="hobbyContent">
                     </table>
                 
@@ -162,6 +179,7 @@
             <!-- about -->
             <h5 class="otherpage" id="otherpage">
             
+                <!-- intro form -->
                 <div id="introsideBar" class="introsideBar">
                     <div class="introsidebarContents">
                         Input New Intro
@@ -173,7 +191,7 @@
                     </div>
                 </div>
                     <span class="introheader" id="introheader">Get to know me!</span>
-
+                        <!-- intro generated content -->
                         <table class="introContent" id="introContent">
                             <img src="drawnpencilsmol.png" class="introopenNav" onclick="introopenNav();linkcloseNav()" ></img>
 
@@ -219,6 +237,8 @@
                     <div class="card-blur"></div>
                     
                 </div>
+
+                <!-- links form -->
                 <div id="linksideBar" class="linksideBar">
                     <div class="linksidebarContents">
                         Update Links

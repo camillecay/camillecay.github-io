@@ -1,5 +1,7 @@
 
 
+
+// authentication
 function login(){
 
     var email = document.getElementById("email").value;
@@ -33,6 +35,7 @@ function login(){
     
 
 
+// hide content on login page
 function hideContent(){
     document.getElementById("container").style.display = 'none';
     document.getElementById("navibar").style.display = 'none';
@@ -41,6 +44,7 @@ function hideContent(){
 
 
 
+// read and delete educ content
     let educContent = document.querySelector("#educContent");
     function readEduc(){
         document.getElementById("educContent").innerHTML = '';
@@ -95,7 +99,7 @@ function hideContent(){
 
 
 
-    //get org content
+// read and delete org content
     let orgContent = document.querySelector("#orgContent");
     function readOrg(){
 
@@ -150,8 +154,8 @@ function hideContent(){
 
     readOrg();
 
-    // get data works
 
+// read and delete work content
     let workContent = document.querySelector("#workContent")
     function readWork(){
 
@@ -206,7 +210,7 @@ function hideContent(){
     readWork();
 
 
-    // hobby 
+// read and delete hobby content
     let hobbyContent = document.querySelector("#hobbyContent")
     function readHobby(){
 
@@ -247,6 +251,7 @@ function hideContent(){
 
     readHobby();
 
+// read and refresh introduction desc
     let introContent = document.querySelector("#introContent")
     function readIntro(){
 
@@ -280,6 +285,7 @@ function hideContent(){
     readIntro();
 
 
+// add new educ content
     const addEducForm = document.querySelector('#addEducForm');
 
     addEducForm.addEventListener('submit', (event) =>{
@@ -303,6 +309,8 @@ function hideContent(){
         document.getElementById("educAddend").value = ''
     })
 
+
+// add new work content
     const addWorkForm = document.querySelector('#addWorkForm');
 
     addWorkForm.addEventListener('submit', (event) =>{
@@ -323,7 +331,7 @@ function hideContent(){
     })
 
 
-
+// add new org content
     const addOrgForm = document.querySelector('#addOrgForm');
 
     addOrgForm.addEventListener('submit', (event) =>{
@@ -344,6 +352,8 @@ function hideContent(){
         document.getElementById("orgAddend").value = ''
     })
 
+
+// add new hobbies content
     const addHobbyForm = document.querySelector('#addHobbyForm');
 
     addHobbyForm.addEventListener('submit', (event) =>{
@@ -362,6 +372,7 @@ function hideContent(){
 
 
 
+// edit intro desc
     const editIntroForm = document.querySelector('#editIntroForm');
 
     editIntroForm.addEventListener('submit', (event) =>{
@@ -377,6 +388,7 @@ function hideContent(){
     })
 
 
+// edit contact links
    function goTwitter() {
     db.collection('links').get().then(snapshot => {
         snapshot.docs.forEach(doc => {
@@ -458,8 +470,7 @@ function hideContent(){
     })
    
 
-
-
+//opening side bar
 function educopenNav() {
     document.getElementById("educsideBar").style.width = "450px";
     changeValEduc();
