@@ -974,7 +974,7 @@ input{
 .workContent{
     font-family:JosefinReg;
     font-size: 45px;
-    color: rgb(19, 19, 19);
+    /* color: rgb(19, 19, 19); */
     padding-left: 140px;
     display: flex;
     flex-wrap: wrap;
@@ -989,6 +989,8 @@ input{
     height: auto;
     width: auto;
 }
+
+
 
 .Wlab{
     font-family: ProximaLight;
@@ -1007,6 +1009,19 @@ input{
     height: auto;
     width: auto;
     padding: 7px;
+}
+
+.Wlink{
+    font-family:ProximaLight;
+    font-size: 25px;;
+    /* color:black; */
+    height: auto;
+    width: auto;
+    padding: 7px;
+}
+
+.workData:hover .Wlink:hover{
+    color: #66a2c7;
 }
 
 

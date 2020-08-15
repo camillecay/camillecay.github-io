@@ -107,7 +107,7 @@ function readWork(){
         let Wname = document.createElement('div');
             Wname.classList.add("Wname");
             Wname.textContent = doc.data().name;
-
+            
         let Wyear_start = document.createElement('div');
             Wyear_start.classList.add("Wyear_start");
             Wyear_start.textContent = doc.data().year_start;
@@ -115,14 +115,18 @@ function readWork(){
         let Wyear_end = document.createElement('div');
             Wyear_end.classList.add("Wyear_end");
             Wyear_end.textContent = doc.data().year_end;
+        
+        let Wlink = document.createElement('a');
+            Wlink.classList.add("Wlink");
+            Wlink.setAttribute('href', doc.data().workLink);
+            Wlink.setAttribute('target', '_blank');
+            Wlink.textContent = 'Check it out here!';
 
-
-      
-
-            work_div.appendChild(Wname);       
-            work_div.appendChild(Wyear_start);
+            work_div.appendChild(Wname); 
+            work_div.appendChild(Wyear_start);   
             work_div.appendChild(Wyear_end);
-   
+            work_div.appendChild(document.createElement('br'));
+            work_div.appendChild(Wlink);
 
         workContent.appendChild(work_div);
 

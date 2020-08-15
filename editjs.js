@@ -180,15 +180,23 @@ function hideContent(){
             let Wyear_end = document.createElement('div');
                 Wyear_end.classList.add("Wyear_end");
                 Wyear_end.textContent = doc.data().year_end;
+
+            let Wlink = document.createElement('a');
+                Wlink.classList.add("Wlink");
+                Wlink.setAttribute('href', doc.data().workLink);
+                Wlink.setAttribute('target', '_blank');
+                Wlink.textContent = 'Check it out here!';
     
             let delButton = document.createElement('div');
                 delButton.classList.add("delButton");
                 delButton.textContent= 'x';
           
     
-                work_div.appendChild(Wname);       
+                work_div.appendChild(Wname);    
                 work_div.appendChild(Wyear_start);
                 work_div.appendChild(Wyear_end);
+                work_div.appendChild(document.createElement('br'));
+                work_div.appendChild(Wlink); 
                 work_div.appendChild(delButton);
     
             workContent.appendChild(work_div);
@@ -317,6 +325,7 @@ function hideContent(){
         event.preventDefault();
         db.collection('works').add({
             name: addWorkForm.workAddname.value,
+            workLink: addWorkForm.workAddlink.value,
             year_start: addWorkForm.workAddstart.value,
             year_end: addWorkForm.workAddend.value
         }).then(function(doc){

@@ -359,7 +359,7 @@ html{
 .workContent{
     font-family:JosefinReg;
     font-size: 45px;
-    color: rgb(19, 19, 19);
+    /* color: rgb(19, 19, 19); */
     padding-left: 140px;
     display: flex;
     flex-wrap: wrap;
@@ -376,6 +376,7 @@ html{
 
 }
 
+
 .Wlab{
     font-family: ProximaLight;
     font-size: 30px;
@@ -386,8 +387,8 @@ html{
 } 
 
 .Wyear_start, .Wyear_end{
-    font-family: ProximaThin;
-    font-size: 30px;
+    font-family:ProximaLight;
+    font-size: 25px;
     color:black;
     display: inline-block;
     height: auto;
@@ -397,7 +398,18 @@ html{
 }
 
 
+.Wlink{
+    font-family:ProximaLight;
+    font-size: 25px;;
+    /* color:black; */
+    height: auto;
+    width: auto;
+    padding: 7px;
+}
 
+.workData:hover .Wlink:hover{
+    color: #66a2c7;
+}
 
 /*  START OF HOBBY PAGE */
 .hobbypage{
